@@ -6,5 +6,7 @@ This figure shows the solidification time of the mantle of GJ1132b for different
 Input files vor **VPLANET**
 -------------
 
-- GJ1132.in
-- `GJ1132b.in`
+- GJ1132.in: Input parameters of the host star
+- b.in: Input parameters of the planet
+  - Initial water mass: dWaterMassAtm (negative values in terrestrial oceans)
+  - XUV absorption efficiency: dAtmXAbsEffH2O
