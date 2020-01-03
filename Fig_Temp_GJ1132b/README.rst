@@ -1,11 +1,13 @@
 Validate MagmOc against `Schaefer et al. (2016) <http://stacks.iop.org/0004-637X/829/i=2/a=63?key=crossref.80f93f037970e1b0ba2e4e36e59ff5c1>`_
 ===========
 
-Overview
---------
-
-Results for Schaefer et al. 2016 taken from Fig. 4 (blue, solid line)
+Results for `Schaefer et al. (2016) <http://stacks.iop.org/0004-637X/829/i=2/a=63?key=crossref.80f93f037970e1b0ba2e4e36e59ff5c1>`_
+taken from Fig. 4, upper panel (blue, solid line)
 for GJ 1132b with 100 TO initial water content
+
+.. figure:: Fig4_Schaefer2016.png
+   :width: 600px
+   :align: center
 
 This folder contains 2 subfolders for runs of `VPLanet`:
 
@@ -40,7 +42,8 @@ This folder contains 2 subfolders for runs of `VPLanet`:
 
     Run this case the same way as scenario 1.
 
-To create a plot comparing the potential temperature evolution of both cases to the results from Schaefer et al. (2016)
+To create a plot comparing the potential temperature evolution of both cases to the results from
+`Schaefer et al. (2016) <http://stacks.iop.org/0004-637X/829/i=2/a=63?key=crossref.80f93f037970e1b0ba2e4e36e59ff5c1>`_
 type
 
 .. code-block:: bash
@@ -48,6 +51,7 @@ type
     python Temp_GJ1132b_100TO.py
 
 Expected output
+---------------
 
 .. figure:: Temp_GJ1132b_100TO_Schaefer_Grey_Petit.png
    :width: 600px
