@@ -1,0 +1,17 @@
+# Output files
+*.forward
+*.backward
+*.log
+*.Laplace
+*.Climate
+*.DailyInsolInit
+*.inv
+*.pdf
+*.png
+*.zip
+*.ps
+*.gif
+*.npz
+*.dat
+*.Ecc.Eigen
+*.Inc.Eigen

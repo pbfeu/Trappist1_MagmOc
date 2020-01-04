@@ -38,8 +38,7 @@ Expected output
    :width: 600px
    :align: center
 
-In combination with Fig. 1 from
-`Hamano et al. (2013) <https://doi.org/10.1038/nature12163>`_
+In combination with Fig. 1 from `Hamano et al. (2013) <https://doi.org/10.1038/nature12163>`_
 ---------------
 
 .. figure:: 5TO_Earth_Hamano.png
