@@ -11,7 +11,7 @@ Thermal and volatile evolution of TRAPPIST-1 g's mantle and atmosphere
 **Author**                  Patrick Barth
 **Modules**                 magmoc, atmesc, radheat, eqtide, stellar
 **Approx. runtime**         1 minute
-**Source code**       `     GitHub <https://github.com/VirtualPlanetaryLaboratory/vplanet-private/tree/magmoc3/examples/MagmOc_TRAPPIST>`_
+**Source code**       `     `GitHub <https://github.com/VirtualPlanetaryLaboratory/vplanet-private/tree/magmoc3/examples/MagmOc_TRAPPIST>`_
 **Initial water content**   2 TO
 **Initial CO2 content**     0
 =========================   ============
