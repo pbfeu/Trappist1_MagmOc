@@ -8,13 +8,13 @@ Solidification time of the magma ocean and desiccation time of the atmosphere
 of TRAPPIST-1 g for initial water masses from 1-100 TO without CO2.
 Evolution plots for three different scenarios are shown in a second plot.
 
+To run this case:
+---------------
+
 Each subfolder contains the necessary files to run `VPLanet`/**MagmOc** for
 TRAPPIST-1 g for different initial water masses.
 To create the summary plot shown below, run the simulations and print the results
 in each folder as follows:
-
-To run this case:
----------------
 
 .. code-block:: bash
 
