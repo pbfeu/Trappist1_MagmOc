@@ -1,0 +1,237 @@
+-------- Log file Solarsystem.log -------
+
+Executable: vplanet
+Version: v1.0.0-393-gd62d9d66d2b2b1fbe7853b2b252cf9c23b75d85c
+System Name: Solarsystem
+Primary Input File: vpl.in
+Body File #1: Sun.in
+Body File #2: Earth.in
+Allow files to be overwitten: Yes
+Mass Units: Kilograms
+Length Units: Meters
+Time Units: Seconds
+Angle Units: Radians
+
+------- FORMATTING -----
+Verbosity Level: 5
+Crossover Decade for Scientific Notation: 4
+Number of Digits After Decimal: 6
+Integration Method: Runge-Kutta4
+Direction: Forward
+Time Step: 3.155760e+07
+Stop Time: 1.577880e+17
+Output Interval: 3.155760e+09
+Use Variable Timestep: Yes
+dEta: 0.100000
+Minimum Value of ecc and obl: 1.000000e-10
+
+
+---- INITIAL SYSTEM PROPERTIES ----
+(Age) System Age [sec]: 1.577880e+13 
+(Time) Simulation Time [sec]: 0.000000 
+(TotAngMom) Total Angular Momentum [kg*m^2/sec]: 8.296053e+43 
+(TotEnergy) Total System Energy [kg*m^2/sec^2]: -9.104482e+40 
+(PotEnergy) Body's non-orbital Potential Energy [kg*m^2/sec^2]: -9.406038e+40 
+(KinEnergy) Body's non-orbital Kinetic Energy [kg*m^2/sec^2]: 3.015563e+39 
+(DeltaTime) Average Timestep Over Last Output Interval [sec]: 0.000000 
+(Density) Average Density [kg/m^3]: 1746.246636 
+(LongP) Body's Longitude of pericenter [rad]: 3.926991 
+(LXUVTot) Total XUV Luminosity [kg*m^2/sec^2/(m^2*sec)]: 7.435159e+23 
+
+----- BODY: Sun ----
+Active Modules: STELLAR
+Module Bit Sum: 65
+Color: 000000
+(Mass) Mass [kg]: 1.988416e+30 
+(Radius) Radius [Solar]: 2.419588 
+(RadGyra) Radius of Gyration []: 0.449900 
+(RotAngMom) Rotational Angular Momentum [kg*m^2/sec]: 8.293392e+43 
+(RotVel) Rotational Velocity [m/sec]: 1.224136e+05 
+(BodyType) Type of Body (0 == planet) []: 0.000000 
+(RotRate) Rotational Frequency [/sec]: 7.272205e-05 
+(RotPer) Rotational Period [sec]: 8.640000e+04 
+(HZLimitDryRunaway) Semi-major axis of Dry Runaway HZ Limit [m]: -1.000000 
+(Instellation) Orbit-averaged INcident STELLar radiATION [kg*m^2/sec^2/(m^2*sec)]: -1.000000 
+(CriticalSemiMajorAxis) Holman & Wiegert (1999) P-type Critical Semi-major Axis [m]: -1.000000 
+(LostEnergy) Body's Total Lost Energy [kg*m^2/sec^2]: 5.562685e-309 
+(LostAngMom) Lost Angular Momentum due to Magnetic Braking [kg*m^2/sec]: 5.562685e-309 
+----- STELLAR PARAMETERS (Sun)------
+(Luminosity) Luminosity [LSUN]: 1.933219 
+(LXUVStellar) Base X-ray/XUV Luminosity [LSUN]: 0.001933 
+(Temperature) Effective Temperature [K]: 4377.256537 
+(LXUVFrac) X-ray/XUV Luminosity Fraction []: 0.001000 
+(RossbyNumber) Rossby Number []: 0.029996 
+(DRotPerDtStellar) Time Rate of Change of Rotation Period in STELLAR []: 9.510363e-10 
+(HZLimRecVenus) Recent Venus Habitable Zone Limit [m]: 1.640992e+11 
+(HZLimRunaway) Runaway Greenhouse Habitable Zone Limit [m]: 2.178515e+11 
+(HZLimMoistGreenhouse) Moist Greenhouse Habitable Zone Limit [m]: 2.171294e+11 
+(HZLimMaxGreenhouse) Maximum Greenhouse Habitable Zone Limit [m]: 3.929566e+11 
+(HZLimEarlyMars) Early Mars Habitable Zone Limit [m]: 4.286401e+11 
+Output Order: Age[year] Luminosity[LSUN] LXUVStellar[LSUN] Radius[Solar] Temperature[K]
+Grid Output Order:
+
+----- BODY: Earth ----
+Active Modules: AtmEsc MagmOc
+Module Bit Sum: 16393
+Color: 13aed5
+(Mass) Mass [kg]: 5.972186e+24 
+(Radius) Radius [m]: 6.378100e+06 
+(RadGyra) Radius of Gyration []: 0.500000 
+(BodyType) Type of Body (0 == planet) []: 0.000000 
+(HZLimitDryRunaway) Semi-major axis of Dry Runaway HZ Limit [m]: 1.888204e+11 
+(Instellation) Orbit-averaged INcident STELLar radiATION [kg*m^2/sec^2/(m^2*sec)]: 2644.188161 
+----- ATMESC PARAMETERS (Earth)------
+(SurfWaterMass) Surface water mass [kg]: 6.950000e+21 
+(EnvelopeMass) Envelope mass [kg]: 0.000000 
+(OxygenMass) Oxygen mass in the atmosphere [kg]: 0.000000 
+(RGLimit) Runaway greenhouse semi-major axis [m]: 2.116533e+11 
+(XO) Atomic oxygen mixing ratio in upper atmosphere []: 0.333333 
+(EtaO) Oxygen eta parameter (Luger and Barnes 2015) []: 0.610527 
+(PlanetRadius) Planet radius [m]: 6.378100e+06 
+(OxygenMantleMass) Mass of oxygen in mantle [kg]: 0.000000 
+(RadXUV) XUV radius separating hydro. dyn. escape and equilibrium [m]: -1.000000 
+(RadSolid) Radius to the solid surface [m]: -1.000000 
+(PresXUV) Pressure at base of thermosphere []: 5.000000 
+(ScaleHeight) Scale height in Lehmer & Catling (2016) model [m]: -1.000000 
+(ThermTemp) Isothermal atmospheric temperature [K]: 195.374154 
+(AtmGasConst) Atmospheric gas constant []: 4124.000000 
+(PresSurf) Surface pressure due to atmosphere [Pa]: -1.000000 
+(DEnvMassDt) Envelope Mass Loss Rate [kg/s]: 0.000000 
+(FXUV) XUV flux [W/m^2]: 2.644188 
+(AtmXAbsEffH2O) XUV atmospheric escape efficiency for H2O []: 0.300000 
+(RocheRadius) Roche Lobe Radius [m]: 1.496558e+09 
+(BondiRadius) Bondi Radius [m]: 1.014863e+07 
+(HEscapeRegime) Integer flag for H envelope escape regime []: 8.000000 
+(RRCriticalFlux) Critical XUV Flux that separates RR and energy-limited escape [W/m^2]: 53.707866 
+(RGDuration) Runaway Greenhouse Duration [years]: 0.00000e+00
+----- MAGMOC PARAMETERS (Earth)------
+(WaterMassMOAtm) Water mass in magma ocean and atmosphere [TO]: 5.000000 
+(PotTemp) Potential temperature magma ocean [K]: 4000.000000 
+(SurfTemp) Surface temperature magma ocean [K]: 4000.000000 
+(WaterMassSol) Water mass in solidified mantle [TO]: 0.000000 
+(SolidRadius) Solidification radius of the mantle [Earth radii]: 0.533074 
+(OxygenMassMOAtm) Oxygen mass in magma ocean and atmosphere [kg]: 0.000000 
+(OxygenMassSol) Oxygen Mass in solidified mantle [kg]: 0.000000 
+(PressWaterAtm) Water pressure in atmosphere [bar]: 24.686455 
+(PressOxygenAtm) Oxygen pressure in atmosphere [bar]: 0.000000 
+(HydrogenMassSpace) H mass lost to space [kg]: 0.000000 
+(OxygenMassSpace) O atoms lost to space [kg]: 0.000000 
+(FracFe2O3Man) Fe2O3 mass fraction in magma ocean []: 0.000000 
+(NetFluxAtmo) Atmospheric Net Flux (OLR-ASR) []: 1.340582e+05 
+(WaterFracMelt) water mass fraction in magma ocean []: 0.001849 
+(RadioPower) Power from radiogenic heating in the mantle [kg*m^2/sec^3]: 9.823813e+13 
+(TidalPower) Power from tidal heating in the mantle [kg*m^2/sec^3]: 0.000000 
+(HZInnerEdge) Inner Edge of the Habitable Zone (Runaway Greenhouse) [m]: 2.116533e+11 
+(MeltFraction) Melt fraction of the magma ocean []: 1.000000 
+(CO2MassMOAtm) CO2 mass in magma ocean and atmosphere [kg]: 1.000000 
+(CO2MassSol) CO2 mass in solidified mantle [kg]: 0.000000 
+(PressCO2Atm) CO2 pressure in atmosphere [bar]: 0.000000 
+(CO2FracMelt) CO2 mass fraction in magma ocean []: 3.614560e-25 
+Output Order: Time[year] PotTemp[K] SurfTemp[K] SolidRadius[Earth radii] WaterMassMOAtm[TO] WaterMassSol[TO] OxygenMassMOAtm[kg] OxygenMassSol[kg] PressWaterAtm[bar] PressOxygenAtm[bar] HydrogenMassSpace[kg] OxygenMassSpace[kg] FracFe2O3Man[kg] NetFluxAtmo[kg] MeltFraction[kg] CO2MassMOAtm[kg] CO2MassSol[kg] PressCO2Atm[bar] CO2FracMelt[bar] WaterFracMelt[bar]
+Grid Output Order:
+
+
+
+---- FINAL SYSTEM PROPERTIES ----
+(Age) System Age [sec]: 5.369210e+13 
+(Time) Simulation Time [sec]: 3.791330e+13 
+(TotAngMom) Total Angular Momentum [kg*m^2/sec]: 8.296177e+43 
+(TotEnergy) Total System Energy [kg*m^2/sec^2]: -9.104376e+40 
+(PotEnergy) Body's non-orbital Potential Energy [kg*m^2/sec^2]: -1.124265e+41 
+(KinEnergy) Body's non-orbital Kinetic Energy [kg*m^2/sec^2]: 2.120888e+39 
+(DeltaTime) Average Timestep Over Last Output Interval [sec]: 2.616933e+05 
+(Density) Average Density [kg/m^3]: 2981.886163 
+(LongP) Body's Longitude of pericenter [rad]: 3.926991 
+(LXUVTot) Total XUV Luminosity [kg*m^2/sec^2/(m^2*sec)]: 5.096034e+23 
+
+----- BODY: Sun ----
+Active Modules: STELLAR
+Module Bit Sum: 65
+Color: 000000
+(Mass) Mass [kg]: 1.988416e+30 
+(Radius) Radius [Solar]: 2.024322 
+(RadGyra) Radius of Gyration []: 0.451022 
+(RotAngMom) Rotational Angular Momentum [kg*m^2/sec]: 5.833470e+43 
+(RotVel) Rotational Velocity [m/sec]: 1.024053e+05 
+(BodyType) Type of Body (0 == planet) []: 0.000000 
+(RotRate) Rotational Frequency [/sec]: 7.271444e-05 
+(RotPer) Rotational Period [sec]: 8.640904e+04 
+(HZLimitDryRunaway) Semi-major axis of Dry Runaway HZ Limit [m]: -1.000000 
+(Instellation) Orbit-averaged INcident STELLar radiATION [kg*m^2/sec^2/(m^2*sec)]: -1.000000 
+(CriticalSemiMajorAxis) Holman & Wiegert (1999) P-type Critical Semi-major Axis [m]: -1.000000 
+(LostEnergy) Body's Total Lost Energy [kg*m^2/sec^2]: 1.926183e+40 
+(LostAngMom) Lost Angular Momentum due to Magnetic Braking [kg*m^2/sec]: 2.460046e+43 
+----- STELLAR PARAMETERS (Sun)------
+(Luminosity) Luminosity [LSUN]: 1.325022 
+(LXUVStellar) Base X-ray/XUV Luminosity [LSUN]: 0.001325 
+(Temperature) Effective Temperature [K]: 4355.974578 
+(LXUVFrac) X-ray/XUV Luminosity Fraction []: 0.001000 
+(RossbyNumber) Rossby Number []: 0.029670 
+(DRotPerDtStellar) Time Rate of Change of Rotation Period in STELLAR []: -5.236549e-10 
+(HZLimRecVenus) Recent Venus Habitable Zone Limit [m]: 1.359501e+11 
+(HZLimRunaway) Runaway Greenhouse Habitable Zone Limit [m]: 1.804860e+11 
+(HZLimMoistGreenhouse) Moist Greenhouse Habitable Zone Limit [m]: 1.798836e+11 
+(HZLimMaxGreenhouse) Maximum Greenhouse Habitable Zone Limit [m]: 3.258688e+11 
+(HZLimEarlyMars) Early Mars Habitable Zone Limit [m]: 3.554587e+11 
+Output Order: Age[year] Luminosity[LSUN] LXUVStellar[LSUN] Radius[Solar] Temperature[K]
+Grid Output Order:
+
+----- BODY: Earth ----
+Active Modules: AtmEsc MagmOc
+Module Bit Sum: 16393
+Color: 13aed5
+(Mass) Mass [kg]: 5.972186e+24 
+(Radius) Radius [m]: 6.378100e+06 
+(RadGyra) Radius of Gyration []: 0.500000 
+(BodyType) Type of Body (0 == planet) []: 0.000000 
+(HZLimitDryRunaway) Semi-major axis of Dry Runaway HZ Limit [m]: 1.563219e+11 
+(Instellation) Orbit-averaged INcident STELLar radiATION [kg*m^2/sec^2/(m^2*sec)]: 1812.317924 
+----- ATMESC PARAMETERS (Earth)------
+(SurfWaterMass) Surface water mass [kg]: 6.950000e+21 
+(EnvelopeMass) Envelope mass [kg]: 0.000000 
+(OxygenMass) Oxygen mass in the atmosphere [kg]: 0.000000 
+(RGLimit) Runaway greenhouse semi-major axis [m]: 1.753430e+11 
+(XO) Atomic oxygen mixing ratio in upper atmosphere []: 0.333333 
+(EtaO) Oxygen eta parameter (Luger and Barnes 2015) []: 0.509672 
+(PlanetRadius) Planet radius [m]: 6.378100e+06 
+(OxygenMantleMass) Mass of oxygen in mantle [kg]: 0.000000 
+(RadXUV) XUV radius separating hydro. dyn. escape and equilibrium [m]: -1.000000 
+(RadSolid) Radius to the solid surface [m]: -1.000000 
+(PresXUV) Pressure at base of thermosphere []: 5.000000 
+(ScaleHeight) Scale height in Lehmer & Catling (2016) model [m]: -1.000000 
+(ThermTemp) Isothermal atmospheric temperature [K]: 177.767604 
+(AtmGasConst) Atmospheric gas constant []: 4124.000000 
+(PresSurf) Surface pressure due to atmosphere [Pa]: -1.000000 
+(DEnvMassDt) Envelope Mass Loss Rate [kg/s]: 0.000000 
+(FXUV) XUV flux [W/m^2]: 1.812318 
+(AtmXAbsEffH2O) XUV atmospheric escape efficiency for H2O []: 0.300000 
+(RocheRadius) Roche Lobe Radius [m]: 1.496558e+09 
+(BondiRadius) Bondi Radius [m]: 1.114949e+07 
+(HEscapeRegime) Integer flag for H envelope escape regime []: 8.000000 
+(RRCriticalFlux) Critical XUV Flux that separates RR and energy-limited escape [W/m^2]: 53.707866 
+(RGDuration) Runaway Greenhouse Duration [years]: 0.00000e+00
+----- MAGMOC PARAMETERS (Earth)------
+(WaterMassMOAtm) Water mass in magma ocean and atmosphere [TO]: 4.685400 
+(PotTemp) Potential temperature magma ocean [K]: 1659.999877 
+(SurfTemp) Surface temperature magma ocean [K]: 1563.202238 
+(WaterMassSol) Water mass in solidified mantle [TO]: 0.251596 
+(SolidRadius) Solidification radius of the mantle [Earth radii]: 1.000000 
+(OxygenMassMOAtm) Oxygen mass in magma ocean and atmosphere [kg]: 1.564888e+19 
+(OxygenMassSol) Oxygen Mass in solidified mantle [kg]: 3.256916e+19 
+(PressWaterAtm) Water pressure in atmosphere [bar]: 1248.316172 
+(PressOxygenAtm) Oxygen pressure in atmosphere [bar]: 0.000000 
+(HydrogenMassSpace) H mass lost to space [kg]: 9.799585e+18 
+(OxygenMassSpace) O atoms lost to space [kg]: 4.520509e+19 
+(FracFe2O3Man) Fe2O3 mass fraction in magma ocean []: 0.087575 
+(NetFluxAtmo) Atmospheric Net Flux (OLR-ASR) []: 166.746498 
+(WaterFracMelt) water mass fraction in magma ocean []: 0.033716 
+(RadioPower) Power from radiogenic heating in the mantle [kg*m^2/sec^3]: 1.030794e+14 
+(TidalPower) Power from tidal heating in the mantle [kg*m^2/sec^3]: 0.000000 
+(HZInnerEdge) Inner Edge of the Habitable Zone (Runaway Greenhouse) [m]: 1.753430e+11 
+(MeltFraction) Melt fraction of the magma ocean []: 0.000000 
+(CO2MassMOAtm) CO2 mass in magma ocean and atmosphere [kg]: 0.997333 
+(CO2MassSol) CO2 mass in solidified mantle [kg]: 0.002667 
+(PressCO2Atm) CO2 pressure in atmosphere [bar]: 0.000000 
+(CO2FracMelt) CO2 mass fraction in magma ocean []: 3.614560e-25 
+Output Order: Time[year] PotTemp[K] SurfTemp[K] SolidRadius[Earth radii] WaterMassMOAtm[TO] WaterMassSol[TO] OxygenMassMOAtm[kg] OxygenMassSol[kg] PressWaterAtm[bar] PressOxygenAtm[bar] HydrogenMassSpace[kg] OxygenMassSpace[kg] FracFe2O3Man[kg] NetFluxAtmo[kg] MeltFraction[kg] CO2MassMOAtm[kg] CO2MassSol[kg] PressCO2Atm[bar] CO2FracMelt[bar] WaterFracMelt[bar]
+Grid Output Order:
