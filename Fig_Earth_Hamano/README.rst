@@ -34,7 +34,7 @@ To run this case:
 Expected output
 ---------------
 
-.. figure:: Earth_5TO_Hamano.pdf
+.. figure:: Earth_5TO_Hamano.png
    :width: 600px
    :align: center
 
@@ -42,6 +42,6 @@ In combination with Fig. 1 from
 `Hamano et al. (2013) <https://doi.org/10.1038/nature12163>`_
 ---------------
 
-.. figure:: 5TO_Earth_Hamano.pdf
+.. figure:: 5TO_Earth_Hamano.png
    :width: 600px
    :align: center
