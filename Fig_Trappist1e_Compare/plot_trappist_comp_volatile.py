@@ -60,6 +60,10 @@ M_O_mo_2      = data_2[:,6] # mass of oxygen in magma ocean + atmosphere (kg)
 M_O_sol_2     = data_2[:,7] # mass of oxygen in solid mantle (kg)
 Press_H2O_2   = data_2[:,8] # partial pressure water in atmopshere (bar)
 Press_O_2     = data_2[:,9] # partial pressure oxygen in atmosphere (bar)
+M_CO2_mo_2    = data_2[:,19] # mass of CO2 in magma ocean + atmosphere (kg)
+M_CO2_sol_2   = data_2[:,20] # mass of CO2 in solid mantle (kg)
+Press_CO2_2   = data_2[:,21] # pressure CO2 in atmopshere (bar)
+Frac_CO2_2    = data_2[:,22] # CO2 fraction in magma ocean
 
 n_time_1 = len(time_1)
 n_time_2 = len(time_2)
@@ -88,7 +92,7 @@ for i in range(n_time_1):
 for i in range(n_time_2):
     M_water_atm_2[i] = Press_H2O_2[i]*1e5 * 4 * np.pi * r_p**2 / g
     M_O_atm_2[i]     = Press_O_2[i]  *1e5 * 4 * np.pi * r_p**2 / g
-    # M_CO2_atm_2[i]   = Press_CO2_2[i]*1e5 * 4 * np.pi * r_p**2 / g
+    M_CO2_atm_2[i]   = Press_CO2_2[i]*1e5 * 4 * np.pi * r_p**2 / g
 
 
 ### Plot ###
@@ -107,7 +111,7 @@ ax1.plot(time_2*10**-6, Tsurf_2, linestyle='--', color=cmap(220))
 ax1.legend(loc='best', frameon=True)
 ax1.set_ylabel('Temperature (K)')
 ax1.set_xscale('log')
-# ax1.set_xlim([1,100])
+ax1.set_xlim([0.1,300])
 ax1.set_ylim([500,4500])
 
 # ---------------------------------------------------------------------------- #
@@ -147,9 +151,9 @@ ax7.plot(time_1*10**-6, M_CO2_atm_1, label='atmosphere',   color=cmap(0))
 ax7.plot(time_1*10**-6, M_CO2_mo_1-M_CO2_atm_1, label='magma ocean',   color=cmap(70))
 ax7.plot(time_1*10**-6, M_CO2_sol_1, label='solid',   color=cmap(220))
 
-# ax7.plot(time_2*10**-6, M_CO2_atm_2,  linestyle='--',  color=cmap(0))
-# ax7.plot(time_2*10**-6, M_CO2_mo_2-M_CO2_atm_2,  linestyle='--', color=cmap(70))
-# ax7.plot(time_2*10**-6, M_CO2_sol_2,  linestyle='--', color=cmap(220))
+ax7.plot(time_2*10**-6, M_CO2_atm_2,  linestyle='--',  color=cmap(0))
+ax7.plot(time_2*10**-6, M_CO2_mo_2-M_CO2_atm_2,  linestyle='--', color=cmap(70))
+ax7.plot(time_2*10**-6, M_CO2_sol_2,  linestyle='--', color=cmap(220))
 
 ax7.set_ylim([1e19,1e23])
 ax7.legend(loc='best', frameon=True)

@@ -20,6 +20,8 @@ INFO: dWaterMassAtm < 0 in file e.in, units assumed to be Terrestrial Oceans.
 INFO: dCO2MassMOAtm < 0 in file e.in, units assumed to be Terrestrial Oceans.
 INFO: sOutFile not set, defaulting to Trappist1.Trappist1.forward.
 INFO: sOutFile not set, defaulting to Trappist1.e.forward.
+WARNING: Trappist1.Trappist1.forward exists.
+WARNING: Trappist1.e.forward exists.
 INFO: sIntegrationMethod not set, defaulting to Runge-Kutta4.
 INFO: No rotational information set in file Trappist1.in. Defaulting to dRotRate = 2*pi/day.
 INFO: dEnvelopeMass < dMinEnvelopeMass. No envelope evolution will be included.
@@ -29,3 +31,14 @@ Using dTidalQMan for e.
 Trappist1's Im(k_2) verified.
 e's Im(k_2) verified.
 INFO: DeltaTime output for first step is defined to be 0 when bVarDt = 1.
+Input files read.
+INFO: Age set in one file, all bodies will have this age.
+All of Trappist1's modules verified.
+All of e's modules verified.
+Input files verified.
+Log file written.
+e's mantle starts to solidify after 971356.395450 years. 
+e enters habitable zone after 251668716.329230 years. 
+HALT: e enters habitable zone after 251668716.329230 years. 
+Log file updated.
+Simulation completed.
