@@ -1,0 +1,44 @@
+INFO: sUnitMass set in vpl.in, all bodies will use this unit.
+INFO: sUnitTime set in vpl.in, all bodies will use this unit.
+INFO: sUnitAngle set in vpl.in, all bodies will use this unit.
+INFO: sUnitLength set in vpl.in, all bodies will use this unit.
+INFO: sUnitTemp not set in file Trappist1.in, defaulting to Kelvin.
+INFO: sUnitTemp not set in file e.in, defaulting to kelvin.
+INFO: dMass < 0 in file e.in, units assumed to be Earth masses.
+INFO: dSemi < 0 in file e.in, units assumed to be AU.
+INFO: dRadius < 0 in file e.in, units assumed to be Earth radii.
+INFO: dRotPeriod < 0 in file e.in, units assumed to be Days.
+INFO: dSurfWaterMass < 0 in file e.in, units assumed to be Terrestrial Oceans (TO).
+INFO: dMinSurfWaterMass < 0 in file e.in, units assumed to be Terrestrial Oceans (TO).
+INFO: dSatXUVTime < 0 in file Trappist1.in, units assumed to be Gyr.
+INFO: d40KNumMan < 0 in file e.in, units assumed to be Primordial Earth 40K Number.
+INFO: d232ThNumMan < 0 in file e.in, units assumed to be Primordial Earth 232Th Number.
+INFO: d235UNumMan < 0 in file e.in, units assumed to be Primordial Earth 235U Numer.
+INFO: d238UNumMan < 0 in file e.in, units assumed to be Primordial Earth 238U Number.
+INFO: dJeansTime not set for body e, defaulting to 3.16e+16 seconds.
+INFO: dWaterMassAtm < 0 in file e.in, units assumed to be Terrestrial Oceans.
+INFO: dCO2MassMOAtm < 0 in file e.in, units assumed to be Terrestrial Oceans.
+INFO: sOutFile not set, defaulting to Trappist1.Trappist1.forward.
+INFO: sOutFile not set, defaulting to Trappist1.e.forward.
+WARNING: Trappist1.Trappist1.forward exists.
+WARNING: Trappist1.e.forward exists.
+INFO: sIntegrationMethod not set, defaulting to Runge-Kutta4.
+INFO: No rotational information set in file Trappist1.in. Defaulting to dRotRate = 2*pi/day.
+INFO: dEnvelopeMass < dMinEnvelopeMass. No envelope evolution will be included.
+INFO: bForceEqSpin and dRotPeriod are both set. Rotation rate will be in equilibrium.
+	File: e.in, Lines 66 and 8
+Using dTidalQMan for e.
+Trappist1's Im(k_2) verified.
+e's Im(k_2) verified.
+INFO: DeltaTime output for first step is defined to be 0 when bVarDt = 1.
+Input files read.
+INFO: Age set in one file, all bodies will have this age.
+All of Trappist1's modules verified.
+All of e's modules verified.
+Input files verified.
+Log file written.
+e's mantle starts to solidify after 971356.395450 years. 
+e enters habitable zone after 251668716.329230 years. 
+HALT: e enters habitable zone after 251668716.329230 years. 
+Log file updated.
+Simulation completed.
