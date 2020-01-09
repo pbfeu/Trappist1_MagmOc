@@ -21,7 +21,7 @@ initial water and 20 TO initial CO2 content, for two different heating scenarios
 
     High tidal heating through large eccentricity (e = 0.1) and high radiogenic
     heating through 1000 times Earth's abundance of 40K in the mantle.
-    See folder `CO2_TR1_e_100TO` and run simulation:
+    See folder `CO2_TR1_e_100TO_heat` and run simulation:
 
     .. code-block:: bash
 
