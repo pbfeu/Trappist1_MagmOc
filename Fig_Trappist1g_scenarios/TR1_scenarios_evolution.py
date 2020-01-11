@@ -60,10 +60,10 @@ ax1.plot(time_2*10**-6, Tsurf_2, label='$T_{surf}$', color=cmap(110))
 
 ax1.text(2e-3, 4100, 'Scenario 1: 2TO', fontsize=16, color='magenta')
 
-ax1.text(1e-2, 2600, '1', fontsize=16, color='magenta')
-ax1.text(   1, 1900, '2', fontsize=16, color='magenta')
-ax1.text(   5, 1900, '3', fontsize=16, color='magenta')
-ax1.text(  20, 1500, '4', fontsize=16, color='magenta')
+ax1.text(1e-2, 3000, 'I', fontsize=16, color='magenta')
+ax1.text(   1, 2100, 'II,III', fontsize=16, color='magenta')
+# ax1.text(   5, 1900, 'III', fontsize=16, color='magenta')
+ax1.text(  20, 900, 'IV & V', fontsize=16, color='magenta')
 
 
 ax1.legend(loc='lower left', bbox_to_anchor= (0, 1.05), ncol=2, borderaxespad=0, frameon=True)
@@ -84,10 +84,10 @@ ax2.plot(time_2*10**-6, Press_O_2,   label='$O_2$',  color='red')
 
 ax2.text(2e-3, 1e4, 'Scenario 1: 2TO', fontsize=16, color='magenta')
 
-ax2.text(1e-2, 6e1, '1', fontsize=16, color='magenta')
-ax2.text(   1, 3e2, '2', fontsize=16, color='magenta')
-ax2.text(   5, 2e2, '3', fontsize=16, color='magenta')
-ax2.text(  20,   3, '4', fontsize=16, color='magenta')
+ax2.text(1e-2, 6e1, 'I', fontsize=16, color='magenta')
+ax2.text(   1, 5e2, 'II,III', fontsize=16, color='magenta')
+# ax2.text(   5, 2e2, 'III', fontsize=16, color='magenta')
+ax2.text(  20,   10, 'IV & V', fontsize=16, color='magenta')
 
 ax2.legend(loc='lower left', bbox_to_anchor= (0, 1.05), ncol=2, borderaxespad=0, frameon=True)
 
@@ -107,11 +107,11 @@ ax3.plot(time_5*10**-6, Tsurf_5, label='$T_surf$', color=cmap(110))
 
 ax3.text(2e-3, 4100, 'Scenario 2: 5TO', fontsize=16, color='magenta')
 
-ax3.text(5e-2, 2500, '1', fontsize=16, color='magenta')
-ax3.text(   1, 1900, '2', fontsize=16, color='magenta')
-ax3.text(   5, 1900, '3', fontsize=16, color='magenta')
-ax3.text(  15, 1700, '4', fontsize=16, color='magenta')
-ax3.text(  60,  600, '5', fontsize=16, color='magenta')
+ax3.text(5e-2, 3000, 'I', fontsize=16, color='magenta')
+ax3.text(   1, 2100, 'II,III', fontsize=16, color='magenta')
+# ax3.text(   5, 1900, 'III', fontsize=16, color='magenta')
+ax3.text(  50, 2300, 'V', fontsize=16, color='magenta')
+ax3.text(  60,  900, 'IV', fontsize=16, color='magenta')
 
 ax3.set_ylabel('Temperature (K)')
 ax3.set_ylim([500,4500])
@@ -127,11 +127,11 @@ ax4.plot(time_5*10**-6, Press_O_5,   label='$O_2$',  color='red')
 
 ax4.text(2e-3, 1e4, 'Scenario 2: 5TO', fontsize=16, color='magenta')
 
-ax4.text(5e-2, 2e2, '1', fontsize=16, color='magenta')
-ax4.text(   1, 1e3, '2', fontsize=16, color='magenta')
-ax4.text(   5, 8e2, '3', fontsize=16, color='magenta')
-ax4.text(  15, 6e2, '4', fontsize=16, color='magenta')
-ax4.text(  60,   3, '5', fontsize=16, color='magenta')
+ax4.text(5e-2, 4e2, 'I', fontsize=16, color='magenta')
+ax4.text(   1, 1.2e3, 'II,III', fontsize=16, color='magenta')
+# ax4.text(   5, 8e2, 'III', fontsize=16, color='magenta')
+ax4.text(  50, 2e3, 'V', fontsize=16, color='magenta')
+ax4.text(  100,   4, 'IV', fontsize=16, color='magenta')
 
 ax4.set_yscale('log')
 ax4.set_ylim([1,3e4])
@@ -149,10 +149,10 @@ ax5.plot(time_100*10**-6, Tsurf_100, label='$T_{surf}$', color=cmap(110))
 
 ax5.text(2e-3, 4100, 'Scenario 3: 100TO', fontsize=16, color='magenta')
 
-ax5.text(  1, 2700, '1', fontsize=16, color='magenta')
-ax5.text( 20, 1700, '2', fontsize=16, color='magenta')
-ax5.text( 40, 1700, '3', fontsize=16, color='magenta')
-ax5.text(100,  600, '4', fontsize=16, color='magenta')
+ax5.text(  3, 3000, 'I', fontsize=16, color='magenta')
+ax5.text( 25, 2100, 'III', fontsize=16, color='magenta')
+# ax5.text( 40, 1700, 'III', fontsize=16, color='magenta')
+ax5.text(100,  1200, 'VI', fontsize=16, color='magenta')
 
 ax5.set_xlabel('Time (Myr)')
 ax5.set_ylabel('Temperature (K)')
@@ -169,10 +169,10 @@ ax6.plot(time_100*10**-6, Press_O_100,   label='$O_2$',  color='red')
 
 ax6.text(2e-3, 1e4, 'Scenario 3: 100TO', fontsize=16, color='magenta')
 
-ax6.text(  1, 1e3, '1', fontsize=16, color='magenta')
-ax6.text( 20, 5e3, '2', fontsize=16, color='magenta')
-ax6.text( 40, 5e3, '3', fontsize=16, color='magenta')
-ax6.text(100, 5e3, '4', fontsize=16, color='magenta')
+ax6.text(  3, 8e2, 'I', fontsize=16, color='magenta')
+ax6.text( 25, 3e3, 'III', fontsize=16, color='magenta')
+# ax6.text( 40, 5e3, 'III', fontsize=16, color='magenta')
+ax6.text(100, 2e3, 'VI', fontsize=16, color='magenta')
 
 ax6.set_yscale('log')
 ax6.set_ylim([1,3e4])
