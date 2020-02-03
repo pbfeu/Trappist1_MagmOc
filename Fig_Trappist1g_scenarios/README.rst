@@ -27,11 +27,11 @@ Do
 .. code-block:: bash
 
     python combine_results.py
-    python TR1_scenarios_g.py
+    python TR1_scenarios_efg.py
     python TR1_scenarios_evolution.py
 
-to combine all results in one file `Results_Trappist1_g.txt` and to print
-the summary plot `Summary_Trappist1_scenarios_g.png` and the temperature and
+to combine all results in three files `Results_Trappist1_e.txt`, `_f.txt`, and `_g.txt`, and to print
+the summary plot `Summary_Trappist1_scenarios_efg.png` and the temperature and
 pressure evolution for the three scenarios.
 
 
