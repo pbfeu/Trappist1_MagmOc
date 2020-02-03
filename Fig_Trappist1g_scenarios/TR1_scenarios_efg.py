@@ -90,13 +90,13 @@ M_water_des_f_tot = np.append(M_water_des_f,100)
 
 ### PLOT ###
 
-fig = plt.figure(num=None, figsize=(9, 5), dpi=300, facecolor='w', edgecolor='k')
+fig = plt.figure(num=None, figsize=(9, 4.3), dpi=300, facecolor='w', edgecolor='k')
 
 # ----------------------------------------------------------------------------------------------------------------- #
 ax1 = fig.add_subplot(121)
 
 ax1.plot(M_water,       t_solid_g,  color=cmap(60), label='Solidification')
-ax1.plot(M_water_des_g, t_des_HZ_g, color=cmap(60), label='Atm. desiccation', linestyle='--')
+# ax1.plot(M_water_des_g, t_des_HZ_g, color=cmap(60), label='Atm. desiccation', linestyle='--')
 
 ax1.fill_between(M_water_des_g,      t_des_HZ_g, 300,            color='red',    alpha=0.3, linewidth=0.0)
 ax1.fill_between([M_water_HZ_g,100], HZ_entry_g, 300,            color='blue',   alpha=0.3, linewidth=0.0)
@@ -114,7 +114,7 @@ ax1.text(1.1, 120, 'Atmosphere \ndesiccated',        color='red',    fontsize=16
 ax1.text(  8, 120, 'Water survives \nin atmosphere', color='blue',   fontsize=16)
 ax1.text(  8,  25, 'Ongoing \nwater loss',           color='orange', fontsize=16)
 
-ax1.legend(title='TRAPPIST-1 g with $H_2O$ atmosphere', loc='lower left', bbox_to_anchor= (0, 1.02), ncol=2, borderaxespad=0, frameon=True, title_fontsize=13)
+# ax1.legend(title='TRAPPIST-1 g with $H_2O$ atmosphere', loc='lower left', bbox_to_anchor= (0, 1.02), ncol=2, borderaxespad=0, frameon=True, title_fontsize=13)
 
 ax1.set_xscale('log')
 ax1.set_yscale('log')
@@ -122,8 +122,8 @@ ax1.set_yscale('log')
 ax1.set_xlim([1,105])
 ax1.set_ylim([1,300])
 
-ax1.set_xlabel('Initial Water Mass (TO)', fontweight='bold')
-ax1.set_ylabel('Time (Myr)',              fontweight='bold')
+ax1.set_xlabel('Initial Water Mass (TO)',   fontweight='bold')
+ax1.set_ylabel('Solidification Time (Myr)', fontweight='bold')
 
 # ----------------------------------------------------------------------------------------------------------------- #
 ax2 = fig.add_subplot(122)
@@ -136,9 +136,9 @@ ax2.plot(M_water, t_solid_e, color=cmap(220), label='e')
 ax2.plot(M_water, t_solid_f, color=cmap(200), label='f')
 ax2.plot(M_water, t_solid_g, color=cmap(60) , label='g')
 
-ax2.plot(M_water_des_e, t_des_HZ_e, color=cmap(220), linestyle='--')
-ax2.plot(M_water_des_f, t_des_HZ_f, color=cmap(200), linestyle='--')
-ax2.plot(M_water_des_g, t_des_HZ_g, color=cmap(60),  linestyle='--')
+# ax2.plot(M_water_des_e, t_des_HZ_e, color=cmap(220), linestyle='--')
+# ax2.plot(M_water_des_f, t_des_HZ_f, color=cmap(200), linestyle='--')
+# ax2.plot(M_water_des_g, t_des_HZ_g, color=cmap(60),  linestyle='--')
 
 ax2.fill_between([7,9], 3, 200, color='grey',   alpha=0.3, linewidth=0.0)
 ax2.fill_between([6,8,10.5], [3,2,3], [3,3,3], color='grey',   alpha=0.3, linewidth=0.0)
@@ -161,7 +161,8 @@ ax2.text(10,8,'2',color=cmap(60),fontsize=14)
 ax2.fill_between([55,105], 7, 11, color=cmap(60),   alpha=0.3, linewidth=0.0)
 ax2.text(70,8,'3',color=cmap(60),fontsize=14)
 
-ax2.legend(loc='lower left', bbox_to_anchor= (0, 1.02), ncol=3, borderaxespad=0, frameon=True)
+# ax2.legend(loc='lower left', bbox_to_anchor= (-0.6, 1.02), ncol=3, borderaxespad=0, frameon=True)
+ax2.legend(loc='upper left', ncol=3, frameon=True)
 
 # ax2.scatter(M_water_HZ_e, HZ_entry_e, color=cmap(220), marker='o')#, linestyle='None')
 # ax2.scatter(M_water_HZ_f, HZ_entry_f, color=cmap(200), marker='o')#, linestyle='None')
@@ -179,5 +180,5 @@ ax2.set_xlabel('Initial Water Mass (TO)', fontweight='bold')
 # ax2.set_ylabel('Time (Myr)', fontweight='bold')
 # ----------------------------------------------------------------------------------------------------------------- #
 
-plt.subplots_adjust(left=0.1, right=0.97, top=0.83, bottom=0.12, wspace=0.23, hspace=0.23)
+plt.subplots_adjust(left=0.1, right=0.97, top=0.95, bottom=0.12, wspace=0.23, hspace=0.23)
 plt.savefig('Summary_Trappist1_scenarios_efg.png')

@@ -61,10 +61,10 @@ SchaeferOxy   = [0,1e-5,1e-4,1e-3,1e-2,1e-1,1e0,1e1,1e2,1e3]
 #------------------------------------------------------------------------------#
 # Solidification time
 WaterMassIni  = [0.1,1,10,100] # in weight percent, corresponds to 0.1,1,10,100 terrestrial oceans
-
+WaterMassIni_petit  = [0.1,1,10,100,150,200]
 # Results for GJ1132b with VPLanet
 New_grey  = [0.0196, 0.201, 2.29, 63.9]
-New_petit = [0.0202, 0.206, 2.34, 65.2]
+New_petit = [0.0202, 0.206, 2.34, 65.2, 165,550]
 
 # Results from Schaefer et al. (2016), Figure 5
 SchaeferWaterTO = [ (10**-2.7)/0.014,(10**-1.7)/0.014,  (10**-1)/0.014, (10**-0.7)/0.014,(10**-0.01)/0.014,(10**0.69)/0.014,  (10**1)/0.014,(10**1.27)/0.014]
@@ -104,20 +104,23 @@ ax1.set_xlabel('Time (Myr)')
 ax2.plot(Water_grey, Oxy_grey, label='VPLanet (grey)', color=cmap(200), linewidth=3.0)
 ax2.plot(Water_petit, Oxy_petit, label='VPLanet (petit)', color=cmap(220), linewidth=3.0)
 ax2.plot(SchaeferWater, SchaeferOxy, label='Schaefer (XUV-Model A)', color='b', linewidth=3.0)
-
+ax2.axvline(x=100,         linewidth=4, color='magenta', linestyle=':')
+ax2.text(90,6e2,'Scenario in top panel',color='magenta',fontsize=14,ha='right')
 # ax2.legend(loc='best', frameon=True, fontsize=14)
 ax2.set_xlabel('Initial Water Mass (TO)')
 ax2.set_ylabel('Final oxygen pressure (bar)')
-ax2.set_xlim([80,1500])
-ax2.set_ylim([1e-5,1e4])
+ax2.set_xlim([8e-2,2e3])
+# ax2.set_ylim([1e-5,1e4])
 ax2.set_xscale('log')
-ax2.set_yscale('log')
+ax2.set_yscale('symlog', linthreshy=1e-4)
 #------------------------------------------------------------------------------#
 ax3.plot(SchaeferWaterTO, SchaeferA, label='Schaefer et al. (2016)', color='b', linewidth=3.0)
 ax3.plot(WaterMassIni, New_grey, label='VPLanet: grey atmosphere', color=cmap(200), linewidth=3.0)
 
-ax3.plot(WaterMassIni, New_petit, label='VPLanet: petitCODE', color=cmap(220), linewidth=3.0)#, linestyle=':')
+ax3.plot(WaterMassIni_petit, New_petit, label='VPLanet: petitCODE', color=cmap(220), linewidth=3.0)#, linestyle=':')
 ax3.plot(WaterMassIni, New_grey, color=cmap(200), linewidth=3.0, linestyle='--')
+ax3.axvline(x=100,         linewidth=4, color='magenta', linestyle=':')
+ax3.text(90,1e3,'Scenario in top panel',color='magenta',fontsize=14,ha='right')
 
 # ax3.legend(frameon=True, fontsize=14, loc='lower right', bbox_to_anchor= (1, 1.02e4), ncol=3)
 ax3.set_xlabel('Initial Water Mass (TO)')

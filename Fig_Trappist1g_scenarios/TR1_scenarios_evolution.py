@@ -99,8 +99,8 @@ ax2.set_ylabel('Atmospheric pressure (bar)')
 # ---------------------------------------------------------------------------- #
 ax3 = fig.add_subplot(323, sharex=ax1)
 
-ax3.axvspan(t_start,  14, color='yellow', alpha=0.3, linewidth=0.0)
-ax3.axvspan(     14, 200, color='red',    alpha=0.3, linewidth=0.0)
+ax3.axvspan(t_start, 49.486, color='yellow', alpha=0.3, linewidth=0.0)
+ax3.axvspan( 49.486,    200, color='red',    alpha=0.3, linewidth=0.0)
 
 ax3.plot(time_5*10**-6, Tpot_5,  label='$T_p$',    color=cmap(0))
 ax3.plot(time_5*10**-6, Tsurf_5, label='$T_surf$', color=cmap(110))
@@ -119,8 +119,8 @@ ax3.set_ylim([500,4500])
 # ---------------------------------------------------------------------------- #
 ax4 = fig.add_subplot(324, sharex=ax1)
 
-ax4.axvspan(t_start,  14, color='yellow', alpha=0.3, linewidth=0.0)
-ax4.axvspan(     14, 200, color='red',    alpha=0.3, linewidth=0.0)
+ax4.axvspan(t_start, 49.486, color='yellow', alpha=0.3, linewidth=0.0)
+ax4.axvspan( 49.486,    200, color='red',    alpha=0.3, linewidth=0.0)
 
 ax4.plot(time_5*10**-6, Press_H2O_5, label='$H_2O$', color='blue')
 ax4.plot(time_5*10**-6, Press_O_5,   label='$O_2$',  color='red')
