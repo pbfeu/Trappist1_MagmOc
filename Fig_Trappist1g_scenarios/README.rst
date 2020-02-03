@@ -40,7 +40,7 @@ pressure evolution for the three scenarios.
 Expected output
 ---------------
 
-.. figure:: Summary_Trappist1_scenarios_g.png
+.. figure:: Summary_Trappist1_scenarios_efg.png
    :width: 600px
    :align: center
 
