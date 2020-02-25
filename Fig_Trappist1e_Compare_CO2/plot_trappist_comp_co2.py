@@ -32,8 +32,10 @@ Short_Planet = 'e'
 
 
 # read data
-data_1 = np.loadtxt('TR1_e_100TO/Trappist1.e.forward')
-data_2 = np.loadtxt('CO2_TR1_e_100TO/Trappist1.e.forward')
+data_1 = np.loadtxt('TR1_e_100TO_sol/Trappist1.e.forward')
+data_2 = np.loadtxt('CO2_TR1_e_100TO_sol/Trappist1.e.forward')
+# data_1 = np.loadtxt('TR1_e_100TO/Trappist1.e.forward')
+# data_2 = np.loadtxt('CO2_TR1_e_100TO/Trappist1.e.forward')
 
 time_1        = data_1[:,0]  # time (yr)
 Tpot_1        = data_1[:,1]  # Potential temp magma ocean (K)
@@ -111,8 +113,8 @@ ax1.plot(time_2*10**-6, Tsurf_2, linestyle='--', color=cmap(220))
 ax1.legend(loc='best', frameon=True)
 ax1.set_ylabel('Temperature (K)')
 ax1.set_xscale('log')
-ax1.set_xlim([0.1,300])
-ax1.set_ylim([500,4500])
+ax1.set_xlim([1,253])
+ax1.set_ylim([1000,3500])
 
 # ---------------------------------------------------------------------------- #
 ax2 = fig.add_subplot(222, sharex=ax1)
@@ -124,7 +126,7 @@ ax2.plot(time_2*10**-6, M_water_atm_2/TO, linestyle='--',  color=cmap(0))
 ax2.plot(time_2*10**-6, M_water_mo_2-M_water_atm_2/TO, linestyle='--', color=cmap(70))
 ax2.plot(time_2*10**-6, M_water_sol_2, linestyle='--', color=cmap(220))
 
-ax2.set_ylim([0.001,100])
+ax2.set_ylim([0.01,100])
 ax2.legend(loc='best', frameon=True)
 ax2.set_ylabel('Water Mass (TO)')
 ax2.set_yscale('log')
