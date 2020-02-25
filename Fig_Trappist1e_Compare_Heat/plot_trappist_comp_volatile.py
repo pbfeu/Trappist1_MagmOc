@@ -32,7 +32,7 @@ Short_Planet = 'e'
 
 
 # read data
-data_1 = np.loadtxt('CO2_TR1_e_100TO/Trappist1.e.forward')
+data_1 = np.loadtxt('CO2_TR1_e_100TO_sol/Trappist1.e.forward')
 data_2 = np.loadtxt('CO2_TR1_e_100TO_heat/Trappist1.e.forward')
 
 time_1        = data_1[:,0]  # time (yr)
@@ -111,8 +111,8 @@ ax1.plot(time_2*10**-6, Tsurf_2, linestyle='--', color=cmap(220))
 ax1.legend(loc='best', frameon=True)
 ax1.set_ylabel('Temperature (K)')
 ax1.set_xscale('log')
-ax1.set_xlim([0.1,300])
-ax1.set_ylim([500,4500])
+ax1.set_xlim([1,253])
+ax1.set_ylim([1500,3500])
 
 # ---------------------------------------------------------------------------- #
 ax2 = fig.add_subplot(222, sharex=ax1)
@@ -124,7 +124,7 @@ ax2.plot(time_2*10**-6, M_water_atm_2/TO, linestyle='--',  color=cmap(0))
 ax2.plot(time_2*10**-6, M_water_mo_2-M_water_atm_2/TO, linestyle='--', color=cmap(70))
 ax2.plot(time_2*10**-6, M_water_sol_2, linestyle='--', color=cmap(220))
 
-ax2.set_ylim([0.001,100])
+ax2.set_ylim([0.01,100])
 ax2.legend(loc='best', frameon=True)
 ax2.set_ylabel('Water Mass (TO)')
 ax2.set_yscale('log')
@@ -139,7 +139,7 @@ ax3.plot(time_2*10**-6, M_O_atm_2,  linestyle='--',  color=cmap(0))
 ax3.plot(time_2*10**-6, M_O_mo_2-M_O_atm_2,  linestyle='--', color=cmap(70))
 ax3.plot(time_2*10**-6, M_O_sol_2,  linestyle='--', color=cmap(220))
 
-ax3.set_ylim([1e19,1e22])
+ax3.set_ylim([1e18,1e22])
 ax3.legend(loc='best', frameon=True)
 ax3.set_xlabel('Time (Myr)')
 ax3.set_ylabel('Oxygen Mass (kg)')
@@ -155,7 +155,7 @@ ax7.plot(time_2*10**-6, M_CO2_atm_2,  linestyle='--',  color=cmap(0))
 ax7.plot(time_2*10**-6, M_CO2_mo_2-M_CO2_atm_2,  linestyle='--', color=cmap(70))
 ax7.plot(time_2*10**-6, M_CO2_sol_2,  linestyle='--', color=cmap(220))
 
-ax7.set_ylim([1e19,1e23])
+ax7.set_ylim([1e18,1e23])
 ax7.legend(loc='best', frameon=True)
 ax7.set_xlabel('Time (Myr)')
 ax7.set_ylabel('$CO_2$ Mass (kg)')
