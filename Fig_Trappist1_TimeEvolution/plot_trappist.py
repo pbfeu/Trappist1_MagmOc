@@ -31,7 +31,7 @@ Initial_water = 1
 
 # Which planet to plot:
 # 1-b, 2-c, 3-d, 4-e, 5-f, 6-g, 7-h
-N_Planet = 6
+N_Planet = 4
 # Eccentricity
 Ecc = 0
 # 40-K abundance (in Earth abundances)
@@ -43,7 +43,7 @@ T_Desicc = [0,0,0,31.114,64.7048,117.2161]
 # read data
 if N_Planet == 4:
     # TRAPPIST-1 e #
-    data = np.loadtxt("Trappist1.Trappist1e.forward")
+    data = np.loadtxt("TR1_e_100TO_heat_long2/Trappist1.e.forward")
     R_N_Planet = 0.913
     M_N_Planet = 0.766
     Name_Planet = 'Trappist-1 e'
@@ -203,7 +203,7 @@ ax1.axvline(x=T_Solid[N_Planet-1],linestyle='--', color=cmap(20))
 ax1.axvline(x=T_Desicc[N_Planet-1],linestyle='--', color=cmap(140))
 ax1.legend(loc='best', frameon=True)
 ax1.set_ylabel('Temperature (K)')
-ax1.set_xscale('log')
+# ax1.set_xscale('log')
 
 # --- Solidification Radius --- #
 ax2 = fig.add_subplot(332, sharex=ax1)
@@ -330,8 +330,8 @@ ax9.set_ylabel('Ratio of atoms gained (%)')
 # ax9.set_xlabel('Time (Myrs)')
 # ax9.set_ylabel('Number of atoms lost ($10^{45}$)')
 plt.subplots_adjust(left=0.05, right=0.99, top=0.93, bottom=0.07)
-plt.savefig('../../../../../../Uni/Masterarbeit/Results_VPlanet/Trappist-1/'+str(Name_Folder)+'/'+str(clock)+'_'+str(Name_Folder)+'_'+str(M_water_mo[0])+'TO_ecc_'+str(Ecc)+'_40K_'+str(K40)+'.png')
-
+# plt.savefig('../../../../../../Uni/Masterarbeit/Results_VPlanet/Trappist-1/'+str(Name_Folder)+'/'+str(clock)+'_'+str(Name_Folder)+'_'+str(M_water_mo[0])+'TO_ecc_'+str(Ecc)+'_40K_'+str(K40)+'.png')
+plt.savefig('plot.png')
 # plt.show()
 
 # plt.figure()

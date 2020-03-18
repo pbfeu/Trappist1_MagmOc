@@ -110,9 +110,9 @@ ax1.text(  2, 1, 'Ex. Scenario 1', rotation=90, ha='right', va='bottom', fontsiz
 ax1.text(  5, 1, 'Ex. Scenario 2', rotation=90, ha='right', va='bottom', fontsize=14, color='magenta')
 ax1.text(100, 1, 'Ex. Scenario 3', rotation=90, ha='right', va='bottom', fontsize=14, color='magenta')
 
-ax1.text(1.1, 120, 'Atmosphere \ndesiccated',        color='red',    fontsize=16)
-ax1.text(  8, 120, 'Water survives \nin atmosphere', color='blue',   fontsize=16)
-ax1.text(  8,  25, 'Ongoing \nwater loss',           color='orange', fontsize=16)
+ax1.text(1.1, 120, 'Atmosphere \ndesiccated',        color='black',    fontsize=16)
+ax1.text(  8, 120, 'Water survives \nin atmosphere', color='black',   fontsize=16)
+ax1.text(  8,  25, 'Ongoing \nwater loss',           color='black', fontsize=16)
 
 # ax1.legend(title='TRAPPIST-1 g with $H_2O$ atmosphere', loc='lower left', bbox_to_anchor= (0, 1.02), ncol=2, borderaxespad=0, frameon=True, title_fontsize=13)
 
@@ -145,21 +145,21 @@ ax2.fill_between([6,8,10.5], [3,2,3], [3,3,3], color='grey',   alpha=0.3, linewi
 ax2.text(9,1.8,'Distance from star',color='grey',fontsize=14,ha='center',va='top')
 
 ax2.fill_between([1,8], 70, 110, color=cmap(220),   alpha=0.3, linewidth=0.0)
-ax2.text(1.5,80,'Scenario 1',color=cmap(220),fontsize=14)
+ax2.text(1.5,80,'Scenario 1',color=cmap(0),fontsize=14)
 ax2.fill_between([9,105], 70, 110, color=cmap(220),   alpha=0.3, linewidth=0.0)
-ax2.text(15,80,'Scenario 2',color=cmap(220),fontsize=14)
+ax2.text(15,80,'Scenario 2',color=cmap(0),fontsize=14)
 
 ax2.fill_between([1,4], 30, 47, color=cmap(200),   alpha=0.3, linewidth=0.0)
-ax2.text(2,34,'1',color=cmap(200),fontsize=14)
+ax2.text(2,34,'1',color=cmap(0),fontsize=14)
 ax2.fill_between([4.5,105], 30, 47, color=cmap(200),   alpha=0.3, linewidth=0.0)
-ax2.text(20,34,'2',color=cmap(200),fontsize=14)
+ax2.text(20,34,'2',color=cmap(0),fontsize=14)
 
 ax2.fill_between([1,2.3], 7, 11, color=cmap(60),   alpha=0.3, linewidth=0.0)
-ax2.text(1.1,8,'1',color=cmap(60),fontsize=14)
+ax2.text(1.1,8,'1',color=cmap(0),fontsize=14)
 ax2.fill_between([2.5,50], 7, 11, color=cmap(60),   alpha=0.3, linewidth=0.0)
-ax2.text(10,8,'2',color=cmap(60),fontsize=14)
+ax2.text(10,8,'2',color=cmap(0),fontsize=14)
 ax2.fill_between([55,105], 7, 11, color=cmap(60),   alpha=0.3, linewidth=0.0)
-ax2.text(70,8,'3',color=cmap(60),fontsize=14)
+ax2.text(70,8,'3',color=cmap(0),fontsize=14)
 
 # ax2.legend(loc='lower left', bbox_to_anchor= (-0.6, 1.02), ncol=3, borderaxespad=0, frameon=True)
 ax2.legend(loc='upper left', ncol=3, frameon=True)

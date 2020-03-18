@@ -32,8 +32,10 @@ Short_Planet = 'e'
 
 
 # read data
-data_1 = np.loadtxt('CO2_TR1_e_100TO_sol/Trappist1.e.forward')
-data_2 = np.loadtxt('CO2_TR1_e_100TO_heat/Trappist1.e.forward')
+# data_1 = np.loadtxt('CO2_TR1_e_100TO_sol/Trappist1.e.forward')
+# data_2 = np.loadtxt('CO2_TR1_e_100TO_heat/Trappist1.e.forward')
+data_1 = np.loadtxt('TR1_e_100TO/Trappist1.e.forward')
+data_2 = np.loadtxt('TR1_e_100TO_heat/Trappist1.e.forward')
 
 time_1        = data_1[:,0]  # time (yr)
 Tpot_1        = data_1[:,1]  # Potential temp magma ocean (K)
@@ -45,10 +47,10 @@ M_O_mo_1      = data_1[:,6] # mass of oxygen in magma ocean + atmosphere (kg)
 M_O_sol_1     = data_1[:,7] # mass of oxygen in solid mantle (kg)
 Press_H2O_1   = data_1[:,8] # partial pressure water in atmopshere (bar)
 Press_O_1     = data_1[:,9] # partial pressure oxygen in atmosphere (bar)
-M_CO2_mo_1    = data_1[:,19] # mass of CO2 in magma ocean + atmosphere (kg)
-M_CO2_sol_1   = data_1[:,20] # mass of CO2 in solid mantle (kg)
-Press_CO2_1   = data_1[:,21] # pressure CO2 in atmopshere (bar)
-Frac_CO2_1    = data_1[:,22] # CO2 fraction in magma ocean
+# M_CO2_mo_1    = data_1[:,19] # mass of CO2 in magma ocean + atmosphere (kg)
+# M_CO2_sol_1   = data_1[:,20] # mass of CO2 in solid mantle (kg)
+# Press_CO2_1   = data_1[:,21] # pressure CO2 in atmopshere (bar)
+# Frac_CO2_1    = data_1[:,22] # CO2 fraction in magma ocean
 
 time_2        = data_2[:,0]  # time (yr)
 Tpot_2        = data_2[:,1]  # Potential temp magma ocean (K)
@@ -60,10 +62,10 @@ M_O_mo_2      = data_2[:,6] # mass of oxygen in magma ocean + atmosphere (kg)
 M_O_sol_2     = data_2[:,7] # mass of oxygen in solid mantle (kg)
 Press_H2O_2   = data_2[:,8] # partial pressure water in atmopshere (bar)
 Press_O_2     = data_2[:,9] # partial pressure oxygen in atmosphere (bar)
-M_CO2_mo_2    = data_2[:,19] # mass of CO2 in magma ocean + atmosphere (kg)
-M_CO2_sol_2   = data_2[:,20] # mass of CO2 in solid mantle (kg)
-Press_CO2_2   = data_2[:,21] # pressure CO2 in atmopshere (bar)
-Frac_CO2_2    = data_2[:,22] # CO2 fraction in magma ocean
+# M_CO2_mo_2    = data_2[:,19] # mass of CO2 in magma ocean + atmosphere (kg)
+# M_CO2_sol_2   = data_2[:,20] # mass of CO2 in solid mantle (kg)
+# Press_CO2_2   = data_2[:,21] # pressure CO2 in atmopshere (bar)
+# Frac_CO2_2    = data_2[:,22] # CO2 fraction in magma ocean
 
 n_time_1 = len(time_1)
 n_time_2 = len(time_2)
@@ -71,10 +73,16 @@ n_time_2 = len(time_2)
 M_water_atm_1 = np.zeros(n_time_1)
 M_O_atm_1     = np.zeros(n_time_1)
 M_CO2_atm_1   = np.zeros(n_time_1)
+Ave_molmass_1 = np.zeros(n_time_1)
+Partpress_H2O_1 = np.zeros(n_time_1)
+Partpress_O2_1  = np.zeros(n_time_1)
 
 M_water_atm_2 = np.zeros(n_time_2)
 M_O_atm_2     = np.zeros(n_time_2)
 M_CO2_atm_2   = np.zeros(n_time_2)
+Ave_molmass_2 = np.zeros(n_time_2)
+Partpress_H2O_2 = np.zeros(n_time_2)
+Partpress_O2_2  = np.zeros(n_time_2)
 
 TO     = 1.39e21         # mass of 1 Terr. Ocean [kg]
 REARTH = 6.3781e6        # m
@@ -84,15 +92,24 @@ r_p    = R_N_Planet*REARTH
 m_p    = M_N_Planet*MEARTH
 g      = (BIGG * m_p) / (r_p ** 2)
 
+MOLMASSH2O = 18e-3
+MOLMASSO2  = 32e-3
+
 for i in range(n_time_1):
     M_water_atm_1[i] = Press_H2O_1[i]*1e5 * 4 * np.pi * r_p**2 / g
     M_O_atm_1[i]     = Press_O_1[i]  *1e5 * 4 * np.pi * r_p**2 / g
-    M_CO2_atm_1[i]   = Press_CO2_1[i]*1e5 * 4 * np.pi * r_p**2 / g
+    # M_CO2_atm_1[i]   = Press_CO2_1[i]*1e5 * 4 * np.pi * r_p**2 / g
+    Ave_molmass_1[i] = (M_water_atm_1[i]+M_O_atm_1[i])/(M_water_atm_1[i]/MOLMASSH2O + M_O_atm_1[i]/MOLMASSO2)
+    Partpress_H2O_1[i] = Press_H2O_1[i] * Ave_molmass_1[i]/MOLMASSH2O
+    Partpress_O2_1[i]  = Press_O_1[i]   * Ave_molmass_1[i]/MOLMASSO2
 
 for i in range(n_time_2):
     M_water_atm_2[i] = Press_H2O_2[i]*1e5 * 4 * np.pi * r_p**2 / g
     M_O_atm_2[i]     = Press_O_2[i]  *1e5 * 4 * np.pi * r_p**2 / g
-    M_CO2_atm_2[i]   = Press_CO2_2[i]*1e5 * 4 * np.pi * r_p**2 / g
+    # M_CO2_atm_2[i]   = Press_CO2_2[i]*1e5 * 4 * np.pi * r_p**2 / g
+    Ave_molmass_2[i] = (M_water_atm_2[i]+M_O_atm_2[i])/(M_water_atm_2[i]/MOLMASSH2O + M_O_atm_2[i]/MOLMASSO2)
+    Partpress_H2O_2[i] = Press_H2O_2[i] * Ave_molmass_2[i]/MOLMASSH2O
+    Partpress_O2_2[i]  = Press_O_2[i]   * Ave_molmass_2[i]/MOLMASSO2
 
 
 ### Plot ###
@@ -111,8 +128,8 @@ ax1.plot(time_2*10**-6, Tsurf_2, linestyle='--', color=cmap(220))
 ax1.legend(loc='best', frameon=True)
 ax1.set_ylabel('Temperature (K)')
 ax1.set_xscale('log')
-ax1.set_xlim([1,253])
-ax1.set_ylim([1500,3500])
+ax1.set_xlim([0.1,253])
+ax1.set_ylim([500,4000])
 
 # ---------------------------------------------------------------------------- #
 ax2 = fig.add_subplot(222, sharex=ax1)
@@ -147,18 +164,16 @@ ax3.set_yscale('log')
 
 # ---------------------------------------------------------------------------- #
 ax7 = fig.add_subplot(224, sharex=ax1)
-ax7.plot(time_1*10**-6, M_CO2_atm_1, label='atmosphere',   color=cmap(0))
-ax7.plot(time_1*10**-6, M_CO2_mo_1-M_CO2_atm_1, label='magma ocean',   color=cmap(70))
-ax7.plot(time_1*10**-6, M_CO2_sol_1, label='solid',   color=cmap(220))
+ax7.plot(time_1*10**-6, Partpress_H2O_1, label='$H_2O$',   color=cmap(70))
+ax7.plot(time_1*10**-6, Partpress_O2_1,  label='$O_2$',   color=cmap(220))
 
-ax7.plot(time_2*10**-6, M_CO2_atm_2,  linestyle='--',  color=cmap(0))
-ax7.plot(time_2*10**-6, M_CO2_mo_2-M_CO2_atm_2,  linestyle='--', color=cmap(70))
-ax7.plot(time_2*10**-6, M_CO2_sol_2,  linestyle='--', color=cmap(220))
+ax7.plot(time_2*10**-6, Partpress_H2O_2,  linestyle='--',  color=cmap(70))
+ax7.plot(time_2*10**-6, Partpress_O2_2,   linestyle='--', color=cmap(220))
 
-ax7.set_ylim([1e18,1e23])
+ax7.set_ylim([1,1e5])
 ax7.legend(loc='best', frameon=True)
 ax7.set_xlabel('Time (Myr)')
-ax7.set_ylabel('$CO_2$ Mass (kg)')
+ax7.set_ylabel('Partial Pressure (bar)')
 ax7.set_yscale('log')
 
 plt.subplots_adjust(left=0.08, right=0.98, top=0.9, bottom=0.1, wspace=0.2, hspace=0.12)
