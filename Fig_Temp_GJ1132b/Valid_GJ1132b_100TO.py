@@ -131,4 +131,5 @@ ax3.set_xscale('log')
 ax3.set_yscale('log')
 #------------------------------------------------------------------------------#
 plt.subplots_adjust(left=0.1, right=0.97, top=0.9, bottom=0.1, wspace=0.3, hspace=0.9)
-plt.savefig('Valid_GJ1132b_100TO_Schaefer_Grey_Petit.png')
+# plt.savefig('Valid_GJ1132b_100TO_Schaefer_Grey_Petit.png')
+plt.savefig('Valid_GJ1132b_100TO_Schaefer_Grey_Petit.eps', format='eps')

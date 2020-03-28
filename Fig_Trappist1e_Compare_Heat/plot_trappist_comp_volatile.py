@@ -177,4 +177,5 @@ ax7.set_ylabel('Partial Pressure (bar)')
 ax7.set_yscale('log')
 
 plt.subplots_adjust(left=0.08, right=0.98, top=0.9, bottom=0.1, wspace=0.2, hspace=0.12)
-plt.savefig('Plot_TR1_e_comp.png')
+# plt.savefig('Plot_TR1_e_comp.png')
+plt.savefig('Plot_TR1_e_comp.eps', format='eps')

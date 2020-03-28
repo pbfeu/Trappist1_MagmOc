@@ -14,7 +14,6 @@ water compared to results presented by
 **Author**                      Patrick Barth
 **Planet name**                 Earth
 **Initial water content**       5 TO
-**Initial CO2 content**         0
 **XUV absorption efficiency**   0.3
 **Atmospheric flux model**      `grey atmosphere <https://doi.org/10.1016/j.epsl.2008.03.062>`_
 **Modules**                     magmoc, stellar, atmesc
@@ -34,13 +33,6 @@ To run this case:
 Expected output
 ---------------
 
-.. figure:: Earth_5TO_Hamano.png
-   :width: 600px
-   :align: center
-
-In combination with Fig. 1 from `Hamano et al. (2013) <https://doi.org/10.1038/nature12163>`_
----------------
-
-.. figure:: 5TO_Earth_Hamano.png
+.. figure:: Earth_5TO_Hamano.eps
    :width: 600px
    :align: center

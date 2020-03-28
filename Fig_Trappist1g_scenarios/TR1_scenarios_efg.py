@@ -90,7 +90,7 @@ M_water_des_f_tot = np.append(M_water_des_f,100)
 
 ### PLOT ###
 
-fig = plt.figure(num=None, figsize=(9, 4.3), dpi=300, facecolor='w', edgecolor='k')
+fig = plt.figure(num=None, figsize=(9, 4.3), dpi=1200, facecolor='w', edgecolor='k')
 
 # ----------------------------------------------------------------------------------------------------------------- #
 ax1 = fig.add_subplot(121)
@@ -181,4 +181,5 @@ ax2.set_xlabel('Initial Water Mass (TO)', fontweight='bold')
 # ----------------------------------------------------------------------------------------------------------------- #
 
 plt.subplots_adjust(left=0.1, right=0.97, top=0.95, bottom=0.12, wspace=0.23, hspace=0.23)
-plt.savefig('Summary_Trappist1_scenarios_efg.png')
+# plt.savefig('Summary_Trappist1_scenarios_efg.png')
+plt.savefig('Summary_Trappist1_scenarios_efg.pdf', format='pdf')

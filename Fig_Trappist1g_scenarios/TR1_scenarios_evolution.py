@@ -182,4 +182,5 @@ ax6.set_ylabel('Atmospheric pressure (bar)')
 
 # ---------------------------------------------------------------------------- #
 plt.subplots_adjust(left=0.08, right=0.98, top=0.95, bottom=0.05, wspace=0.2, hspace=0.12)
-plt.savefig('Plot_TR1_g_scenarios_evolution.png')
+# plt.savefig('Plot_TR1_g_scenarios_evolution.png')
+plt.savefig('Plot_TR1_g_scenarios_evolution.pdf', format='pdf')

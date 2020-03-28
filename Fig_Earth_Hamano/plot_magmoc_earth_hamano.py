@@ -7,6 +7,7 @@ plt.close('all')
 # Set style for plot #
 mpl.rcParams['lines.linewidth'] = 3
 mpl.rcParams['axes.labelsize'] = 13
+mpl.rcParams['axes.labelweight'] = 'bold'
 mpl.rcParams['xtick.labelsize'] = 12
 mpl.rcParams['ytick.labelsize'] = 12
 mpl.rcParams['legend.fontsize'] = 15
@@ -96,15 +97,15 @@ ax1.set_ylim([1300,3200])
 ax1.plot(time*10**-6, Tsurf, label='$T_{surf}$', color='white', linewidth=5)
 ax1.axvline(x=t_sol*1e-6,linestyle='--', color='lightgray',linewidth=2)
 
-ax11.fill_between(time*10**-6, V_sol, color=cmap(0), alpha=0.8)
-ax11.fill_between(time*10**-6, 1, V_sol, color=cmap(0), alpha=0.5)
+ax11.fill_between(time*10**-6, V_sol, color=cmap(0))
+ax11.fill_between(time*10**-6, 1, V_sol, color='grey')
 ax11.set_yticks([0.5,1])
 ax11.set_ylim([0,1])
 ax11.set_ylabel('Cumulate\nfraction')
 
 
-ax4.fill_between(time*10**-6, Press_H2O, color=cmap(0), alpha=0.3)
-ax4.plot(time*10**-6, Press_H2O, color=cmap(0))
+ax4.fill_between(time*10**-6, Press_H2O, color='silver')
+ax4.plot(time*10**-6, Press_H2O, color='grey')
 ax4.axvline(x=t_sol*1e-6,linestyle='--', color='lightgray',linewidth=2)
 ax4.set_ylabel('Atmospheric \npressure \n(bar)')
 ax4.set_ylim([0,1500])
@@ -140,7 +141,7 @@ ax4.plot([0.25,0.5],[700,300],linewidth=1,color=cmap(0))
 
 ax11.text(0.05, 0.2,'Temperature',   color='white', fontsize='16')
 ax11.text(0.002, 0.4, 'Melts', fontsize='16', bbox={'facecolor':'white', 'pad':5})
-ax11.text(0.2, 0.6, 'Cummulates', fontsize='16', bbox={'facecolor':'white', 'pad':5})
+ax11.text(0.2, 0.6, 'Cumulates', fontsize='16', bbox={'facecolor':'white', 'pad':5})
 
 bbox_props = dict(boxstyle="rarrow", fc="firebrick", ec="darkred", lw=2)
 t = ax4.text(0.25, 100, "ou", ha="center", va="center", rotation=90, color='firebrick',
@@ -156,4 +157,5 @@ bc = t2.get_bbox_patch()
 bc.set_boxstyle("rarrow", pad=0.3)
 
 plt.subplots_adjust(left=0.18, right=0.86, top=0.95, bottom=0.1, hspace=0)
-plt.savefig('Earth_5TO_Hamano.png')
+# plt.savefig('Earth_5TO_Hamano.png')
+plt.savefig('Earth_5TO_Hamano.eps', format='eps')
