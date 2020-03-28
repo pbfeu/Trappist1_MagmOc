@@ -33,6 +33,6 @@ To run this case:
 Expected output
 ---------------
 
-.. figure:: Earth_5TO_Hamano.eps
+.. figure:: Earth_5TO_Hamano.png
    :width: 600px
    :align: center
