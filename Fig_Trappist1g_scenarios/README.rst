@@ -13,6 +13,8 @@ To run this case:
 
 Each subfolder contains the necessary files to run `VPLanet`/**MagmOc** for
 TRAPPIST-1 g for different initial water masses.
+For the planets e and f, only the folders for 1 TO initial water mass are included.
+Copy the folders and change the initial water mass to 2, 5, 10, 20, 50, and 100 TO.
 To create the summary plot shown below, run the simulations and print the results
 in each folder as follows:
 
