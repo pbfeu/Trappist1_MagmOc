@@ -1,19 +1,16 @@
-Validate MagmOc against `Hamano et al. (2013) <https://doi.org/10.1038/nature12163>`_
+Magma ocean evolution on Earth
 ===========
 
 Overview
 --------
 
-Simulation of the magma ocean and atmosphere evolution for Earth containing 5TO
-water compared to results presented by
-`Hamano et al. (2013) <https://doi.org/10.1038/nature12163>`_
-(Fig. 1).
+Thermal and volatile evolution of Earth's mantle and atmosphere
 
 =============================   ===============
 **Date**                        03/30/20
 **Author**                      Patrick Barth
 **Planet name**                 Earth
-**Initial water content**       5 TO
+**Initial water content**       20 TO
 **XUV absorption efficiency**   0.3
 **Atmospheric flux model**      `grey atmosphere <https://doi.org/10.1016/j.epsl.2008.03.062>`_
 **Modules**                     magmoc, stellar, atmesc
@@ -21,18 +18,13 @@ water compared to results presented by
 **Source code**                 `GitHub <https://github.com/VirtualPlanetaryLaboratory/vplanet-private/tree/magmoc3/examples/MagmOc_Earth>`_
 =============================   ===============
 
-To run this case:
+
+To run this example
 -------------------
 
 .. code-block:: bash
 
     vplanet vpl.in
-    python plot_magmoc_earth_hamano.py
+    python print_results.py
 
-
-Expected output
----------------
-
-.. figure:: Earth_5TO_Hamano.png
-   :width: 600px
-   :align: center
+The results will be saved in Results.dat
