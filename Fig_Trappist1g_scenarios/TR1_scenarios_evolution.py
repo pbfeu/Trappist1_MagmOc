@@ -150,9 +150,9 @@ ax5.plot(time_100*10**-6, Tsurf_100, label='$T_{surf}$', color=cmap(110))
 ax5.text(2e-3, 4100, 'Scenario 3: 100TO', fontsize=16, color='magenta')
 
 ax5.text(  3, 3000, 'I', fontsize=16, color='magenta')
-ax5.text( 25, 2100, 'III', fontsize=16, color='magenta')
-# ax5.text( 40, 1700, 'III', fontsize=16, color='magenta')
-ax5.text(100,  1200, 'VI', fontsize=16, color='magenta')
+ax5.text( 25, 2100, 'IV', fontsize=16, color='magenta')
+ax5.text(  2, 1000, 'V', fontsize=16, color='magenta')
+ax5.text(100, 1200, 'VI', fontsize=16, color='magenta')
 
 ax5.set_xlabel('Time (Myr)')
 ax5.set_ylabel('Temperature (K)')
@@ -170,8 +170,8 @@ ax6.plot(time_100*10**-6, Press_O_100,   label='$O_2$',  color='red')
 ax6.text(2e-3, 1e4, 'Scenario 3: 100TO', fontsize=16, color='magenta')
 
 ax6.text(  3, 8e2, 'I', fontsize=16, color='magenta')
-ax6.text( 25, 3e3, 'III', fontsize=16, color='magenta')
-# ax6.text( 40, 5e3, 'III', fontsize=16, color='magenta')
+ax6.text( 25, 3e3, 'IV', fontsize=16, color='magenta')
+ax6.text( 15, 3e2, 'V', fontsize=16, color='magenta')
 ax6.text(100, 2e3, 'VI', fontsize=16, color='magenta')
 
 ax6.set_yscale('log')
@@ -182,5 +182,5 @@ ax6.set_ylabel('Atmospheric pressure (bar)')
 
 # ---------------------------------------------------------------------------- #
 plt.subplots_adjust(left=0.08, right=0.98, top=0.95, bottom=0.05, wspace=0.2, hspace=0.12)
-# plt.savefig('Plot_TR1_g_scenarios_evolution.png')
-plt.savefig('Plot_TR1_g_scenarios_evolution.pdf', format='pdf')
+plt.savefig('Plot_TR1_g_scenarios_evolution.png')
+# plt.savefig('Plot_TR1_g_scenarios_evolution.pdf', format='pdf')
