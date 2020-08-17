@@ -87,4 +87,4 @@ plt.tick_params(axis='y', which='both', direction='in')
 plt.subplots_adjust(left=0.3, right=0.9, top=0.88, bottom=0.07, wspace=0.4, hspace=0.1)
 
 # plt.savefig('TR1_Water_Noack_fraction.png')
-plt.savefig('TR1_Water_Noack_fraction_update.eps', format='eps')
+plt.savefig('TR1_Water_Noack_fraction.eps', format='eps')
