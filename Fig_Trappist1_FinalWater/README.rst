@@ -63,11 +63,11 @@ Expected output
 
 
 .. figure:: TR1_Water_Dorn_fraction.png
-   :width: 20px
+   :height: 500px
    :align: center
 
 .. figure:: TR1_Water_Noack_fraction.png
-   :width: 20px
+   :height: 500px
    :align: center
 
 These plots can then be combined to the figure shown in the paper:
