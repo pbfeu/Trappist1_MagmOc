@@ -53,6 +53,15 @@ sig_e  = 0.062
 sig_f  = 0.099
 sig_g  = 0.118
 
+# NEW ESTIMATES for masses and radii by Agol et al. 2020 (in prep)
+# Water_Frac_e = 0.110
+# Water_Frac_f = 0.079
+# Water_Frac_g = 0.184
+#
+# sig_e  = 0.102
+# sig_f  = 0.081
+# sig_g  = 0.056
+
 for i in range(lw):
     pdf_e[i] = gaussian(M_water_frac_e[i], Water_Frac_e, sig_e)
     pdf_f[i] = gaussian(M_water_frac_f[i], Water_Frac_f, sig_f)
@@ -78,4 +87,4 @@ plt.tick_params(axis='y', which='both', direction='in')
 plt.subplots_adjust(left=0.3, right=0.9, top=0.88, bottom=0.07, wspace=0.4, hspace=0.1)
 
 # plt.savefig('TR1_Water_Noack_fraction.png')
-plt.savefig('TR1_Water_Noack_fraction.eps', format='eps')
+plt.savefig('TR1_Water_Noack_fraction_update.eps', format='eps')

@@ -124,5 +124,5 @@ plt.ylabel('Remaining Water Mass Fraction', fontweight='bold')
 plt.tick_params(axis='both', which='both', direction='in', top=True, right=True)
 
 plt.subplots_adjust(left=0.1, right=0.98, top=0.88, bottom=0.07)
-plt.savefig('Final_Water_Trappist1.png')
-# plt.savefig('Final_Water_Trappist1.eps', format='eps')
+# plt.savefig('Final_Water_Trappist1.png')
+plt.savefig('Final_Water_Trappist1.eps', format='eps')
