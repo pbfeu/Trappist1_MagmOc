@@ -10,6 +10,26 @@ import matplotlib as mpl
 #     from Schaefer et al. 2016     #
 #####################################
 
+#------------------------------------------------------------------------------#
+# ONLY CHANGES HERE!
+#------------------------------------------------------------------------------#
+
+## Enter results for grey atmosphere simulations:
+# initial water masses in this order:
+#               0.1,    1,   10,   60,   65,   70,   85,   100
+Oxy_grey   = [    0,    0,    0,    0, 4.73, 51.3,  204,   383] # final oxygen pressure [bar]
+Tsol_grey  = [0.025, 0.26, 3.08, 39.5, 45.6, 52.3, 75.8, 104.7] # solidification time [Myr]
+
+## Enter results for petitCODE atmosphere simulations:
+# initial water masses in this order:
+#               0.1,    1,   10,   100,  105,  110, 130, 150
+Oxy_petit  = [    0,    0,    0,     0, 20.5, 65.1, 283, 545] # final oxygen pressure [bar]
+Tsol_petit = [0.026, 0.27, 3.15, 106.3,  117,  129, 179, 236]
+
+#------------------------------------------------------------------------------#
+# NO CHANGES BELOW!
+#------------------------------------------------------------------------------#
+
 plt.close('all')
 
 # Set style for plot #
@@ -48,11 +68,8 @@ T_p_schaefer    = [4000, 3980, 3940, 3869, 3680, 3100, 2845,  2725, 2675, 2625, 
 WaterFracIni  = [0.0014,0.014,0.14,1.4] # in weight percent, corresponds to 0.1,1,10,100 terrestrial oceans
 
 # Results for GJ1132b with VPLanet
-Water_grey = [0.1, 85, 90, 95, 100] # in Myr, no escape
-Oxy_grey   = [  0,  0, 30, 68, 107] # in Myr, XUV-abs eff. = 0.15
-
-Water_petit = [0.1, 130, 135, 140, 150,  200] # in Myr, XUV-abs eff. = 0.3
-Oxy_petit   = [  0,   0,  12,  71, 241, 2844]
+Water_grey  = [0.1,    1,   10,   60,   65,   70,   85, 100] # initial water mass [TO]
+Water_petit = [0.1,    1,   10,  100,  105,  110,  130, 150] # initial water mass [TO]
 
 # Results from Schaefer et al. (2016), Figure 7a
 SchaeferWater = [ 100,222,254,306,341,806,985,1131,1249,1356]
@@ -60,15 +77,10 @@ SchaeferOxy   = [0,1e-5,1e-4,1e-3,1e-2,1e-1,1e0,1e1,1e2,1e3]
 
 #------------------------------------------------------------------------------#
 # Solidification time
-WaterMassIni  = [0.1,1,10,100] # in weight percent, corresponds to 0.1,1,10,100 terrestrial oceans
-WaterMassIni_petit  = [0.1,1,10,100,150,200]
-# Results for GJ1132b with VPLanet
-New_grey  = [0.0196, 0.201, 2.29, 63.9]
-New_petit = [0.0202, 0.206, 2.34, 65.2, 165,550]
 
 # Results from Schaefer et al. (2016), Figure 5
 SchaeferWaterTO = [ (10**-2.7)/0.014,(10**-1.7)/0.014,  (10**-1)/0.014, (10**-0.7)/0.014,(10**-0.01)/0.014,(10**0.69)/0.014,  (10**1)/0.014,(10**1.27)/0.014]
-SchaeferA     = [10**-2.26,10**-1.3,10**-0.6,10**-0.28,10**0.823, 10**2.6,10**3.1, 10**3.7]
+SchaeferA       = [10**-2.26,10**-1.3,10**-0.6,10**-0.28,10**0.823, 10**2.6,10**3.1, 10**3.7]
 
 #------------------------------------------------------------------------------#
 ### PLOT ###
@@ -93,7 +105,7 @@ ax1.legend(loc='lower left', bbox_to_anchor= (-0.09, 1.1), ncol=3, frameon=True,
 
 # ax1.legend(loc='best', frameon=True, fontsize=12)
 
-ax1.set_xlim([1e-4,1e2])
+ax1.set_xlim([1e-4,1.5e2])
 ax1.set_ylim([1500,4000])
 
 ax1.set_xscale('log')
@@ -115,10 +127,10 @@ ax2.set_xscale('log')
 ax2.set_yscale('symlog', linthreshy=1e-4)
 #------------------------------------------------------------------------------#
 ax3.plot(SchaeferWaterTO, SchaeferA, label='Schaefer et al. (2016)', color='b', linewidth=3.0)
-ax3.plot(WaterMassIni, New_grey, label='VPLanet: grey atmosphere', color=cmap(200), linewidth=3.0)
+ax3.plot(Water_grey, Tsol_grey, label='VPLanet: grey atmosphere', color=cmap(200), linewidth=3.0)
 
-ax3.plot(WaterMassIni_petit, New_petit, label='VPLanet: petitCODE', color=cmap(220), linewidth=3.0)#, linestyle=':')
-ax3.plot(WaterMassIni, New_grey, color=cmap(200), linewidth=3.0, linestyle='--')
+ax3.plot(Water_petit, Tsol_petit, label='VPLanet: petitCODE', color=cmap(220), linewidth=3.0)#, linestyle=':')
+ax3.plot(Water_grey, Tsol_grey, color=cmap(200), linewidth=3.0, linestyle='--')
 ax3.axvline(x=100,         linewidth=4, color='magenta', linestyle=':')
 ax3.text(90,1e3,'Scenario in top panel',color='magenta',fontsize=14,ha='right')
 
@@ -131,5 +143,5 @@ ax3.set_xscale('log')
 ax3.set_yscale('log')
 #------------------------------------------------------------------------------#
 plt.subplots_adjust(left=0.1, right=0.97, top=0.9, bottom=0.1, wspace=0.3, hspace=0.9)
-# plt.savefig('Valid_GJ1132b_100TO_Schaefer_Grey_Petit.png')
-plt.savefig('Valid_GJ1132b_100TO_Schaefer_Grey_Petit.eps', format='eps')
+plt.savefig('Valid_GJ1132b_100TO_Schaefer_Grey_Petit.png')
+# plt.savefig('Valid_GJ1132b_100TO_Schaefer_Grey_Petit.eps', format='eps')
