@@ -1,5 +1,6 @@
-\documentclass[paper=letterpaper,fontsize=12pt,oneside,twocolumn]{article}
+\documentclass[oneside,twocolumn]{article}
 
+\usepackage{aas}
 \usepackage{graphicx}
 \usepackage{natbib}
 \usepackage{authblk}
@@ -10,7 +11,7 @@
 \usepackage{amsmath}
 \usepackage[table]{xcolor}
 \usepackage[colorlinks,bookmarks=false,linkcolor=blue,urlcolor=red,citecolor=blue]{hyperref}
-\usepackage{setspace}
+% \usepackage{setspace}
 % \doublespacing
 \usepackage{geometry}
 \geometry{margin=0.7in}
@@ -120,7 +121,7 @@ Abiotic oxygen build-up on rocky planets around M dwarfs was already proposed by
 
 In this study, we consider magma ocean volatile outgassing and atmosphere erosion for the potentially habitable TRAPPIST\=/1 planets e, f, g considering an early \ce{H2O} dominated atmosphere. We consider initial water contents from 1 - 100 terrestrial oceans and compare the final water content to the results obtained by different interior structure models \citep{Noack2016,barr2018interior,Dorn2018,Unterborn2018b}. We also investigate how different levels of interior heating, from radiogenic and tidal sources, affect the final atmospheric composition.
 
-To perform our simulations, we have augmented the open source software package \vplanet{}\footnote{code available at \url{https://github.com/VirtualPlanetaryLaboratory/vplanet}} \citep{Barnes2020} to include the physics and chemistry necessary to model the TRAPPIST\=/1 planets during the magma ocean phase. \vplanet{} already includes ``modules'' for radiogenic heating (\radheat{}), tidal heating (\eqtide{}), stellar evolution (\stellar{}) and water photolysis and hygrogen escape (\atmesc{}). Here we introduce a new module \magmoc{} that calculates the thermal evolution of a magma ocean, volatile fluxes through the surface, and radiative cooling through an \ce{H2O} atmosphere.
+To perform our simulations, we have augmented the open source software package \vplanet\footnote{code available at \url{https://github.com/VirtualPlanetaryLaboratory/vplanet}} \citep{Barnes2020} to include the physics and chemistry necessary to model the TRAPPIST\=/1 planets during the magma ocean phase. \vplanet already includes ``modules'' for radiogenic heating (\radheat{}), tidal heating (\eqtide{}), stellar evolution (\stellar{}) and water photolysis and hygrogen escape (\atmesc{}). Here we introduce a new module \magmoc{} that calculates the thermal evolution of a magma ocean, volatile fluxes through the surface, and radiative cooling through an \ce{H2O} atmosphere.
 
 In Section \ref{Sec_Model}, we present the magma ocean model, which builds from \citet{Schaefer2016} and \citet{Elkins-Tanton2008}. We further describe different calculations of the atmospheric net flux that leads to the cooling of the planet. 
 We discuss our model in comparison to previous work by \citet{Schaefer2016} for GJ~1132b and \citet{Elkins-Tanton2008} and \citet{Hamano2013} for Earth in Section \ref{chap_validation}.
@@ -143,7 +144,7 @@ We summarize our results in Section~\ref{sec: conclusion} and conclude with an o
     \label{struc_magma}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[ht]
     \caption[Parameters thermal model]{Parameters for the thermal model}
     \begin{tabular}{cl}
     % \begin{tabu} to \columnwidth {X[c]X[4]}
@@ -291,7 +292,7 @@ The lag between the line connecting the two centers of mass and the direction of
 \label{sec_vol_model}
 %----------------
 
-\begin{table}[h]
+\begin{table}[ht]
 	\caption[Parameters volatile model]{Parameters for the volatile model}
 	\begin{tabular}{cl}
 		\noalign{\smallskip}
@@ -422,7 +423,7 @@ In the following, we present \magmoc{} simulations for two scenarios to validate
 \label{sec_res_GJ}
 %----------------
 
-\begin{figure*}[h]
+\begin{figure*}[ht]
     \centering
     \includegraphics[width=\textwidth]{BarthFig2.pdf}
     \caption{\textit{Upper:} Evolution of the potential mantle temperature of GJ~1132b for $\SI{100}{TO}$ initial water content from \citet[Fig. 4]{Schaefer2016} (blue) compared to the results obtained with \vplanet{} with the grey atmosphere model (yellow) and the \petit{} (red). Solidification times (= atmospheric desiccation) for all three simulations are indicated by dashed lines. Solidification proceeds similarly but slightly faster with \vplanet{} while desiccation of atmosphere occurs later. This scenario is indicated in the lower panels (pink line). \textit{Lower left:} Comparison of the solidification time of the magma ocean for range of initial water masses with different models. Data from \citet[Fig. 5]{Schaefer2016}. \textit{Lower right:} Comparison of final oxygen pressure in the atmosphere at magma ocean solidification. Data from \citet[Fig. 7]{Schaefer2016}.
@@ -431,7 +432,7 @@ In the following, we present \magmoc{} simulations for two scenarios to validate
     \label{GJ1132b_VPLanet_Schaefer}
 \end{figure*}
 
-\begin{table}[h]
+\begin{table}[ht]
 	\caption[Parameters GJ~1132b]{Physical parameters of GJ~1132b \citep{Bonfils2018}}
 	\begin{tabular}{ccc}
 		\noalign{\smallskip}
@@ -495,7 +496,7 @@ We will show henceforth \magmoc{} results for the TRAPPIST\=/1 planets and Earth
 \label{sec: Earth}
 %----------------
 
-\begin{table}[h]
+\begin{table}[ht]
     \caption{\vplanet{} input parameters for Earth}
 	\begin{tabular}{cc}
 		\noalign{\smallskip}
@@ -516,7 +517,7 @@ We will show henceforth \magmoc{} results for the TRAPPIST\=/1 planets and Earth
 	\label{Tab_Input_Earth}
 \end{table}
 
-\begin{table*}[h]
+\begin{table*}[ht]
 \begin{center}
     \caption{\vplanet{} Results for Earth: Comparison between 
     \citet[Tab. 3, Earth ($\SI{2000}{\kilo\metre}$)]{Elkins-Tanton2008} and \vplanet{} (without \ce{CO2}) 
@@ -618,7 +619,7 @@ We now turn to applying \magmoc{} to the potentially habitable planets of the TR
 \label{chap_results}
 %----------------
 
-\begin{table*}[h]
+\begin{table*}[ht]
 \begin{center}
     \caption{Physical and run parameters for TRAPPIST\=/1~e, f, and g.}
 	\begin{tabular}{cccc}
@@ -679,7 +680,7 @@ We now turn to applying \magmoc{} to the potentially habitable planets of the TR
 \end{center}
 \end{table*}
 
-\begin{figure*}[h]
+\begin{figure*}[ht]
     \centering
     \includegraphics[width=\textwidth]{BarthFig4.pdf}
     \caption{Mass-radius data for 1000 interior structure models per planet using randomly-selected compositions (in terms of water and iron fraction) and main planetary parameters. The three error circles give three different ranges of measured masses and radii with different confidence intervals as discussed in the text.}
@@ -708,7 +709,7 @@ A concise compilation of the input parameters for the TRAPPIST\=/1 planets and t
 \subsection{Different Evolution Scenarios}
 %----------------
 
-\begin{figure*}[h]
+\begin{figure*}[ht]
     \centering
     \includegraphics[width=\textwidth]{BarthFig5.pdf}
     \caption{\textit{Left:} Solidification time of the mantle for TRAPPIST\=/1~g. \textit{Yellow:} Ongoing water loss through atmospheric escape; \textit{Red:} Scenarios with initial water masses of less than $\SI{7}{TO}$ will lead to a desiccated atmosphere (no water left); \textit{Blue:} Scenarios with $>\SI{7}{TO}$ water will be left in atmosphere when the atmospheric escape stops \citep{Kopparapu2013}. Vertical lines indicate three examples of the three different characteristic scenarios (see text and Fig.~\ref{Plot_TR1_scenarios_evolution} for more information). \textit{Right:} Solidification and desiccation times for planets e, f, and g (solid lines in red, yellow and blue, respectively). Range of the different scenarios is indicated with colored bars. The grey arrow indicates the distance to the star which increases from planet e to g. The range of the different scenarios depends on the orbital distance of the planet to the star which determines the incoming stellar radiation and therefore the cooling flux.
@@ -794,7 +795,7 @@ In scenario~3, the planet ends its magma ocean evolution, when an extremely thic
 \subsection{Influence of Additional Heat Sources}
 %----------------
 
-\begin{figure*}[h]
+\begin{figure*}[ht]
     \centering
     \includegraphics[width=\textwidth]{BarthFig7.pdf}
     \caption{Temperature and volatile budgets (water and \ce{O2}) evolution on TRAPPIST\=/1~e with $\SI{100}{TO}$ initial water content for two different heating scenarios: Reference heating (solid), i.e. low eccentricity and Earth's abundance of \ce{^{40}K}, and extreme heating (dashed), i.e. high eccentricity and 100 times Earth's abundance of \ce{^{40}K}.
@@ -870,7 +871,7 @@ The prolonged lifetime of the magma ocean allows more oxygen to dissolve and oxi
 \label{sec_discuss}
 %----------------
 
-\begin{figure*}[h]
+\begin{figure*}[ht]
     \centering
     \includegraphics[width=\textwidth]{BarthFig9.pdf}
     \caption{Final water content of the planets TRAPPIST\=/1~e, f, g with a pure steam atmosphere for different initial water mass fractions and two different heating scenarios: Reference (solid): Earth abundances of radioactive isotopes and low eccentricities; and extreme (dashed): 1000 times Earth abundance of \ce{^{40}K} and fixed eccentricities ($e=0.1$). Simulations for all planets with 100\% steam atmospheres (red, yellow, blue). Red and purple bars indicate range of initial water fractions that lead to abiotic \ce{O2} build-up. Values for initial water fractions $>20-30$~wt\% (grey area) are extrapolations on the assumption that solidification times do not increase with more water. Probability distributions show the current estimates for water content of the TRAPPIST\=/1 planets by \citet{Dorn2018} and those calculated with the interior structure model by \citet[this study]{Noack2016} with 1$\sigma$ error range for mass and radius (Table~\ref{Tab_Input_TRAPPIST-1}).
@@ -976,6 +977,7 @@ The still debated composition of the TRAPPIST\=/1 planets as well as the lava wo
 %----------------
 
 We thank Gianluigi Ortenzi and Peter Driscoll for valuable discussion and suggestions for improvement, Andrew Linkcowski for time consuming climate simulations, and Rodrigo Luger and Hayden Smotherman for their support with \vplanet{}.
+P.B. acknowledges a St Leonard's Interdisciplinary Doctoral Scholarship from the University of St Andrews.
 L.C. acknowledges support from the DFG Priority Programme SP1833 Grant CA 1795/3.
 R.B.'s contribution was supported by NASA grant number 80NSSC20K0229 and the NASA Virtual Planetary Laboratory Team through grant number 80NSSC18K0829.
 Th.H. acknowledges support from the European Research Council under the Horizon 2020 Framework Program via the ERC Advanced Grant Origins 83 24 28.
@@ -992,7 +994,7 @@ No competing financial interests exist.
 \section*{Appendix}
 %----------------
 
-\begin{table}[h]
+\begin{table}[ht]
     \caption[Values model]{Values for parameters used in \magmoc{}. If not otherwise indicated, they are taken from \citet{Schaefer2016}}
     \begin{tabular}{ccc}
     	\noalign{\smallskip}
