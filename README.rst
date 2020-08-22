@@ -1,6 +1,7 @@
-# Magma ocean evolution of the TRAPPIST-1 planets
+Magma ocean evolution of the TRAPPIST-1 planets
+===========
 
-## Patrick Barth, Ludmila Carone, Rory Barnes, Lena Noack, Paul Molli\`{e}re, and Thomas Henning
+Patrick Barth, Ludmila Carone, Rory Barnes, Lena Noack, Paul Molli\`{e}re, and Thomas Henning
 
 This repository contains folders for nearly all figures and one table in
 Barth et al. (2020). These folders are linked in the manuscript in the
