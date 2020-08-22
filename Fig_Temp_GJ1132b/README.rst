@@ -53,6 +53,6 @@ type
 Expected output
 ---------------
 
-.. figure:: Temp_GJ1132b_100TO_Schaefer_Grey_Petit.png
+.. figure:: Valid_GJ1132b_100TO_Schaefer_Grey_Petit.png
    :width: 600px
    :align: center
