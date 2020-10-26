@@ -42,8 +42,8 @@ if N_Planet == 4:
 elif N_Planet == 5:
     # TRAPPIST-1 f #
     data = np.loadtxt("Trappist1.f.forward")
-    R_N_Planet = 1.05
-    M_N_Planet = 0.926
+    R_N_Planet = 1.045
+    M_N_Planet = 1.039
     Ecc = 0.01
     Name_Planet = 'Trappist-1 f'
     Name_Folder = 'Trappist-1_f'

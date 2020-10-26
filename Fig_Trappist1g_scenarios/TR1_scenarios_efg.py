@@ -102,24 +102,24 @@ ax1.fill_between(M_water_des_g,      t_des_HZ_g, 300,            color='red',   
 ax1.fill_between([M_water_HZ_g,100], HZ_entry_g, 300,            color='blue',   alpha=0.3, linewidth=0.0)
 ax1.fill_between(M_water_des_g_tot,  1,          t_des_HZ_g_tot, color='yellow', alpha=0.3, linewidth=0.0)
 
-ax1.axvline(x=2, ymax=0.8, linewidth=4, color='magenta', linestyle=':')
+ax1.axvline(x=1, ymax=0.8, linewidth=4, color='magenta', linestyle=':')
 ax1.axvline(x=5, ymax=0.8, linewidth=4, color='magenta', linestyle=':')
 ax1.axvline(x=100,         linewidth=4, color='magenta', linestyle=':')
 
-ax1.text(  2, 1, 'Ex. Scenario 1', rotation=90, ha='right', va='bottom', fontsize=14, color='magenta')
+ax1.text(  1.05, 1, 'Ex. Scenario 1', rotation=90, ha='left', va='bottom', fontsize=14, color='magenta')
 ax1.text(  5, 1, 'Ex. Scenario 2', rotation=90, ha='right', va='bottom', fontsize=14, color='magenta')
 ax1.text(100, 1, 'Ex. Scenario 3', rotation=90, ha='right', va='bottom', fontsize=14, color='magenta')
 
-ax1.text(1.1, 120, 'Atmosphere \ndesiccated',        color='black',    fontsize=16)
-ax1.text(  8, 120, 'Water survives \nin atmosphere', color='black',   fontsize=16)
-ax1.text(  8,  25, 'Ongoing \nwater loss',           color='black', fontsize=16)
+ax1.text(1, 120, 'Atmosphere \ndesiccated',        color='black',    fontsize=14)
+ax1.text(  8, 120, 'Water survives \nin atmosphere', color='black',   fontsize=14)
+ax1.text(  8,  25, 'Ongoing \nwater loss',           color='black', fontsize=14)
 
 # ax1.legend(title='TRAPPIST-1 g with $H_2O$ atmosphere', loc='lower left', bbox_to_anchor= (0, 1.02), ncol=2, borderaxespad=0, frameon=True, title_fontsize=13)
 
 ax1.set_xscale('log')
 ax1.set_yscale('log')
 
-ax1.set_xlim([1,105])
+ax1.set_xlim([0.96,105])
 ax1.set_ylim([1,300])
 
 ax1.set_xlabel('Initial Water Mass (TO)',   fontweight='bold')
@@ -154,12 +154,12 @@ ax2.text(2,34,'1',color=cmap(0),fontsize=14)
 ax2.fill_between([4.5,105], 30, 47, color=cmap(200),   alpha=0.3, linewidth=0.0)
 ax2.text(20,34,'2',color=cmap(0),fontsize=14)
 
-ax2.fill_between([1,2.3], 7, 11, color=cmap(60),   alpha=0.3, linewidth=0.0)
-ax2.text(1.1,8,'1',color=cmap(0),fontsize=14)
-ax2.fill_between([2.5,50], 7, 11, color=cmap(60),   alpha=0.3, linewidth=0.0)
-ax2.text(10,8,'2',color=cmap(0),fontsize=14)
-ax2.fill_between([55,105], 7, 11, color=cmap(60),   alpha=0.3, linewidth=0.0)
-ax2.text(70,8,'3',color=cmap(0),fontsize=14)
+ax2.fill_between([1,1.5], 8, 12, color=cmap(60),   alpha=0.3, linewidth=0.0)
+ax2.text(1.1,9,'1',color=cmap(0),fontsize=14)
+ax2.fill_between([1.7,60], 8, 12, color=cmap(60),   alpha=0.3, linewidth=0.0)
+ax2.text(10,9,'2',color=cmap(0),fontsize=14)
+ax2.fill_between([67,105], 8, 12, color=cmap(60),   alpha=0.3, linewidth=0.0)
+ax2.text(73,9,'3',color=cmap(0),fontsize=14)
 
 # ax2.legend(loc='lower left', bbox_to_anchor= (-0.6, 1.02), ncol=3, borderaxespad=0, frameon=True)
 ax2.legend(loc='upper left', ncol=3, frameon=True)
@@ -181,5 +181,5 @@ ax2.set_xlabel('Initial Water Mass (TO)', fontweight='bold')
 # ----------------------------------------------------------------------------------------------------------------- #
 
 plt.subplots_adjust(left=0.1, right=0.97, top=0.95, bottom=0.12, wspace=0.23, hspace=0.23)
-# plt.savefig('Summary_Trappist1_scenarios_efg.png')
-plt.savefig('Summary_Trappist1_scenarios_efg.pdf', format='pdf')
+plt.savefig('Summary_Trappist1_scenarios_efg.png')
+# plt.savefig('Summary_Trappist1_scenarios_efg.pdf', format='pdf')

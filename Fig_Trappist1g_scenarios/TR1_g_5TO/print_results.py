@@ -13,8 +13,8 @@ from time import time
 # TRAPPIST-1 g #
 # read data
 data = np.loadtxt("Trappist1.g.forward")
-R_N_Planet = 1.15
-M_N_Planet = 1.14
+R_N_Planet = 1.129
+M_N_Planet = 1.321
 Name_Planet = 'Trappist-1 g'
 Name_Folder = 'Trappist-1_g'
 
@@ -24,7 +24,7 @@ Tpot        = data[:,1]  # Potential temp magma ocean (K)
 Tsurf       = data[:,2]  # Surface temp (K)
 r_sol       = data[:,3]  # solidification radius (R_earth)
 M_water_mo  = data[:,4] # water mass in magma ocean + atmosphere (TO)
-M_water_sol = data[:,5] # water mass in solid mantle (kg)
+M_water_sol = data[:,5] # water mass in solid mantle (TO)
 M_O_mo      = data[:,6] # mass of oxygen in magma ocean + atmosphere (kg)
 M_O_sol     = data[:,7] # mass of oxygen in solid mantle (kg)
 Press_H2O   = data[:,8] # partial pressure water in atmopshere (bar)

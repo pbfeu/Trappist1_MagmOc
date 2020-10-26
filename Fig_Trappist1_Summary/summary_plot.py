@@ -232,5 +232,5 @@ ax4.set_ylabel('Partial Oxygen Pressure (bar)', fontweight='bold')
 # ----------------------------------------------------------------------------------------------------------------- #
 
 plt.subplots_adjust(left=0.08, right=0.98, top=0.93, bottom=0.07, wspace=0.23, hspace=0.1)
-plt.savefig('Summary_Trappist1.eps', format='eps')
-# plt.savefig('Summary_Trappist1.png', format='png')
+# plt.savefig('Summary_Trappist1.eps', format='eps')
+plt.savefig('Summary_Trappist1.png', format='png')

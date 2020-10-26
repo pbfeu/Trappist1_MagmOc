@@ -23,8 +23,8 @@ cmap=plt.get_cmap('nipy_spectral')
 
 # TRAPPIST-1 g #
 data = np.loadtxt("Trappist1.g.forward")
-R_N_Planet = 1.15
-M_N_Planet = 1.14
+R_N_Planet = 1.129
+M_N_Planet = 1.321
 Ecc = 0.002
 Name_Planet = 'Trappist-1 g'
 Name_Folder = 'Trappist-1_g'

@@ -4,8 +4,8 @@ saModules     magmoc, atmesc, radheat, eqtide      # Modules to apply, exact spe
 cColor        13aed5
 
 # Physical Properties
-dMass         -0.766                       # Mass, negative -> Earth masses
-dRadius       -0.913                       # Radius, negative -> Earth radii
+dMass         -0.692                       # Mass, negative -> Earth masses
+dRadius       -0.92                        # Radius, negative -> Earth radii
 dRotPeriod    -1                           # Rotation Period, negative -> days
 
 # MAGMOC Properties
