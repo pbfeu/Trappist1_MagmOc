@@ -48,7 +48,7 @@ type
 
 .. code-block:: bash
 
-    python Temp_GJ1132b_100TO.py
+    python Valid_GJ1132b_100TO.py
 
 Expected output
 ---------------

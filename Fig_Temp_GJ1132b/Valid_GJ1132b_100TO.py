@@ -17,14 +17,14 @@ import matplotlib as mpl
 ## Enter results for grey atmosphere simulations:
 # initial water masses in this order:
 #               0.1,    1,   10,   60,   65,   70,   85,   100
-Oxy_grey   = [    0,    0,    0,    0, 4.73, 51.3,  204,   383] # final oxygen pressure [bar]
-Tsol_grey  = [0.025, 0.26, 3.08, 39.5, 45.6, 52.3, 75.8, 104.7] # solidification time [Myr]
+Oxy_grey   = [    0,    0,    0,    0,    0, 27.7,  185,   367] # final oxygen pressure [bar]
+Tsol_grey  = [0.025, 0.26, 3.08, 39.5, 45.6, 52.3, 75.7, 104.7] # solidification time [Myr]
 
 ## Enter results for petitCODE atmosphere simulations:
 # initial water masses in this order:
 #               0.1,    1,   10,   100,  105,  110, 130, 150
-Oxy_petit  = [    0,    0,    0,     0, 20.5, 65.1, 283, 545] # final oxygen pressure [bar]
-Tsol_petit = [0.026, 0.27, 3.15, 106.3,  117,  129, 179, 236]
+Oxy_petit  = [    0,    0,    0,     0, 22.0, 69.6, 298, 567] # final oxygen pressure [bar]
+Tsol_petit = [0.026, 0.27, 3.15, 106.1,  117,  128, 179, 236]
 
 #------------------------------------------------------------------------------#
 # NO CHANGES BELOW!
@@ -100,7 +100,7 @@ ax1.axvline(x=time_petit[len(time)-1]*1e-6,           ymax=0.5, color=cmap(220),
 ax1.axvline(x=time[len(time)-1]*1e-6,       ymin=0.5, ymax=1,   color=cmap(200), linestyle='--')
 ax1.axvline(x=10**1.555,                                        color=cmap(50),  linestyle='--')
 
-ax1.text(100, 4050, 'Solidification', ha='right', fontsize=16)
+ax1.text(150, 4050, 'Solidification', ha='right', fontsize=16)
 ax1.legend(loc='lower left', bbox_to_anchor= (-0.09, 1.1), ncol=3, frameon=True, fontsize=13)
 
 # ax1.legend(loc='best', frameon=True, fontsize=12)
@@ -132,7 +132,7 @@ ax3.plot(Water_grey, Tsol_grey, label='VPLanet: grey atmosphere', color=cmap(200
 ax3.plot(Water_petit, Tsol_petit, label='VPLanet: petitCODE', color=cmap(220), linewidth=3.0)#, linestyle=':')
 ax3.plot(Water_grey, Tsol_grey, color=cmap(200), linewidth=3.0, linestyle='--')
 ax3.axvline(x=100,         linewidth=4, color='magenta', linestyle=':')
-ax3.text(90,1e3,'Scenario in top panel',color='magenta',fontsize=14,ha='right')
+ax3.text(90,2e3,'Scenario in top panel',color='magenta',fontsize=14,ha='right')
 
 # ax3.legend(frameon=True, fontsize=14, loc='lower right', bbox_to_anchor= (1, 1.02e4), ncol=3)
 ax3.set_xlabel('Initial Water Mass (TO)')
