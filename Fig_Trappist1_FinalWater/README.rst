@@ -50,7 +50,7 @@ executing the following scripts:
 
 .. code-block:: bash
 
-    python TR1_Water_final.py
+    python TR1_Water_Final.py
     python TR1_Water_Frac_Dorn.py
     python TR1_Water_Frac_Noack.py
 

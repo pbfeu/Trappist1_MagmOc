@@ -13,8 +13,8 @@ from time import time
 # TRAPPIST-1 f #
 # read data
 data = np.loadtxt("Trappist1.f.forward")
-R_N_Planet = 1.05
-M_N_Planet = 0.926
+R_N_Planet = 1.045
+M_N_Planet = 1.039
 Name_Planet = 'Trappist-1 f'
 Name_Folder = 'Trappist-1_f'
 
@@ -60,6 +60,7 @@ atm_des   = 0 # Atmosphere desiccated?
 quasi_sol = 0 # Atm desiccated & T_surf below 1000K but not solid?
 
 # find time of solidification, desiccation, and/or entry of habitable zone
+t_solid = 0
 for i in range(n_time):
 
     M_water_atm[i] = Press_H2O[i] * 1e5 * 4 * np.pi * r_p**2 / g
@@ -77,6 +78,8 @@ for i in range(n_time):
         esc_stop = 1
         t_habit  = i
 
+if (t_solid==0):
+    t_solid = i_end
 # write results to file
 results = open('Results.dat','w')
 results.write('# -----------------------'+str(Name_Planet)+'----------------------- # \n')
