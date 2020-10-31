@@ -23,8 +23,8 @@ Water = 100
 
 
 # TRAPPIST-1 e #
-R_N_Planet = 0.913
-M_N_Planet = 0.766
+R_N_Planet = 0.920
+M_N_Planet = 0.692
 Ecc = 0.005
 Name_Planet = 'Trappist-1 e'
 Name_Folder = 'Trappist-1_e'
@@ -119,11 +119,11 @@ fig.suptitle('Solid: $e=0.005$ & $^{40}K$ abundance of Earth\nDashed: $e=0.1$ an
 
 # ---------------------------------------------------------------------------- #
 ax1 = fig.add_subplot(221)
-ax1.plot(time_1*10**-6, Tpot_1, label='$T_p$', color=cmap(0))
+ax1.plot(time_1*10**-6, Tpot_1, label='$T_\\mathrm{p}$', color=cmap(0))
 ax1.plot(time_2*10**-6, Tpot_2, linestyle='--', color=cmap(0))
 
-ax1.plot(time_1*10**-6, Tsurf_1, label='$T_{surf}$', color=cmap(220))
-ax1.plot(time_2*10**-6, Tsurf_2, linestyle='--', color=cmap(220))
+# ax1.plot(time_1*10**-6, Tsurf_1, label='$T_{surf}$', color=cmap(220))
+# ax1.plot(time_2*10**-6, Tsurf_2, linestyle='--', color=cmap(220))
 
 ax1.legend(loc='best', frameon=True)
 ax1.set_ylabel('Temperature (K)')
@@ -164,8 +164,8 @@ ax3.set_yscale('log')
 
 # ---------------------------------------------------------------------------- #
 ax7 = fig.add_subplot(224, sharex=ax1)
-ax7.plot(time_1*10**-6, Partpress_H2O_1, label='$H_2O$',   color=cmap(70))
-ax7.plot(time_1*10**-6, Partpress_O2_1,  label='$O_2$',   color=cmap(220))
+ax7.plot(time_1*10**-6, Partpress_H2O_1, label='$\\rm{H_2O}$',   color=cmap(70))
+ax7.plot(time_1*10**-6, Partpress_O2_1,  label='$\\rm{O_2}$',   color=cmap(220))
 
 ax7.plot(time_2*10**-6, Partpress_H2O_2,  linestyle='--',  color=cmap(70))
 ax7.plot(time_2*10**-6, Partpress_O2_2,   linestyle='--', color=cmap(220))

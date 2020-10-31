@@ -13,8 +13,8 @@ from time import time
 # TRAPPIST-1 e #
 # read data
 data = np.loadtxt("Trappist1.e.forward")
-R_N_Planet = 0.913
-M_N_Planet = 0.766
+R_N_Planet = 0.920
+M_N_Planet = 0.692
 Name_Planet = 'Trappist-1 e'
 Name_Folder = 'Trappist-1_e'
 

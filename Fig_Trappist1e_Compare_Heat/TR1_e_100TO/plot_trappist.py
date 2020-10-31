@@ -34,24 +34,24 @@ K40 = 1
 if N_Planet == 4:
     # TRAPPIST-1 e #
     data = np.loadtxt("Trappist1.e.forward")
-    R_N_Planet = 0.913
-    M_N_Planet = 0.766
+    R_N_Planet = 0.920
+    M_N_Planet = 0.692
     Ecc = 0.005
     Name_Planet = 'Trappist-1 e'
     Name_Folder = 'Trappist-1_e'
 elif N_Planet == 5:
     # TRAPPIST-1 f #
     data = np.loadtxt("Trappist1.f.forward")
-    R_N_Planet = 1.05
-    M_N_Planet = 0.926
+    R_N_Planet = 1.045
+    M_N_Planet = 1.039
     Ecc = 0.01
     Name_Planet = 'Trappist-1 f'
     Name_Folder = 'Trappist-1_f'
 elif N_Planet == 6:
     # TRAPPIST-1 g #
     data = np.loadtxt("Trappist1.g.forward")
-    R_N_Planet = 1.15
-    M_N_Planet = 1.14
+    R_N_Planet = 1.129
+    M_N_Planet = 1.321
     Ecc = 0.002
     Name_Planet = 'Trappist-1 g'
     Name_Folder = 'Trappist-1_g'
