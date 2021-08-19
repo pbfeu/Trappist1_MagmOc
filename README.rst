@@ -7,7 +7,7 @@ This repository contains folders for nearly all figures and one table in
 Barth et al. (2021). These folders are linked in the manuscript in the
 corresponding figure/table captions. You can find the paper here:
 `DOI <https://www.liebertpub.com/doi/10.1089/ast.2020.2277>`_ and
-`arXiv <hhttps://arxiv.org/abs/2008.09599>`_
+`arXiv <https://arxiv.org/abs/2008.09599>`_
 
 To reproduce the figures presented in the manuscript, you find the necessary
 files to run vplanet and detailed instructions and scripts to produce the figures
