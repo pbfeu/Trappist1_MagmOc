@@ -32,7 +32,8 @@ M_H_Space   = data[:,10] # partial pressure oxygen in atmosphere (bar)
 M_O_Space   = data[:,11] # partial pressure oxygen in atmosphere (bar)
 Frac_Fe2O3  = data[:,12] # partial pressure oxygen in atmosphere (bar)
 NetFluxAtmo = data[:,13] # atmospheric net flux (W/m^2)
-Frac_H2O    = data[:,14] # Water fraction in magma ocean
+Melt_Frac   = data[:,14] # Melt fraction in magma ocean
+Frac_H2O    = data[:,15] # Water fraction in magma ocean
 
 n_time = len(time)
 i_end  = n_time-1
@@ -49,6 +50,7 @@ BIGG   = 6.67428e-11     # m**3/kg/s**2
 r_p    = R_N_Planet * REARTH
 m_p    = M_N_Planet * MEARTH
 g      = (BIGG * m_p) / (r_p ** 2)
+r_c    = r_p * 3.4e6 / REARTH
 
 MuH2O = 18
 MuO2  = 32
@@ -68,6 +70,14 @@ M_water_out = M_water_ini - M_water_sol[t_solid] - M_water_mo_left # in TO
 
 Press_tot = Press_H2O[t_solid] + Press_O[t_solid]
 
+t_98 = 0
+for j in range(n_time):
+    r_sol_p = r_sol[j]*r_p
+    sol_frac = (r_sol_p**3 - r_c**3 + (1-Melt_Frac[j]) * (r_p**3 - r_sol_p**3)) / (r_p**3 - r_c**3)
+    if (t_98 == 0) and (sol_frac > 0.98):
+        t_98 = j
+        print(j, sol_frac, r_sol_p, r_c, r_p, Melt_Frac[j])
+
 # write results to file
 results = open('Results.dat','w')
 results.write('# -----------------------'+str(Name_Planet)+'----------------------- # \n')
@@ -83,6 +93,20 @@ results.write(str(time[t_solid]*1e-6)+'\n')
 
 results.write('# Water content of liquid at 98% solidification [wt%] \n')
 results.write(str(100*Frac_H2O[t_solid])+'\n')
+
+results.write('# ------------------------------------------------------------------ # \n')
+#
+# results.write('# Fraction of initial water mass degassed into atmosphere [%] \n')
+# results.write(str(100*M_water_out/M_water_ini)+'\n')
+#
+# results.write('# Total pressure in atmosphere [bar] \n')
+# results.write(str(Press_tot)+'\n')
+
+results.write('# Time to reach 98% solidification [Myr]\n')
+results.write(str(time[t_98]*1e-6)+'\n')
+
+results.write('# Water content of liquid at 98% solidification [wt%] \n')
+results.write(str(100*Frac_H2O[t_98])+'\n')
 
 results.write('# ------------------------------------------------------------------ # \n')
 results.close()
